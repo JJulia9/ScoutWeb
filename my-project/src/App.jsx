@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/shared/Home';
+import './App.css';
 
 
 function App() {
@@ -7,9 +10,13 @@ function App() {
   return (
     <>
   
-    <div className="bg-blue-500 text-white text-center p-5">
-      Hello, Tailwind CSS!
-    </div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Router>
+
+
   </>
 
   )
