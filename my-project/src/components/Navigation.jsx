@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
           }; 
 
         return (
-            <nav className="w-full flex justify-between items-center py-8 px-10 bg-white">
+            <nav className="w-full flex justify-between items-center py-8 px-10 bg-white z-10">
        
            {/*logo  */}
             <Link to="/" className="text-3xl font-bold leading-none" >
@@ -27,7 +27,7 @@ import { Link } from "react-router-dom";
                 </button>
             </div>
 
-            <div className={`fixed inset-0 z-10 ${isNavOpen ? 'flex' : 'hidden'} flex-col bg-white lg:hidden`}>
+            <div className={`fixed inset-0 z-20 ${isNavOpen ? 'flex' : 'hidden'} flex-col bg-white lg:hidden`}>
                 {/* Close Icon */}
                 <div className="absolute top-0 right-0 p-4" onClick={toggleNav}>
                 <svg
@@ -46,7 +46,7 @@ import { Link } from "react-router-dom";
 
 
         {/* Mobile Navigation Links */}
-        <ul className="flex flex-col justify-center items-center h-full">
+        <ul className="flex flex-col justify-center items-center h-full z-3">
           <li className="mb-1">
                             <Link to="/" className=" font-paragraph block p-4 text-m font-semibold text-text hover:bg-green-50 hover:text-secondary rounded" onClick={toggleNav}>Home</Link>
                         </li>
@@ -67,9 +67,9 @@ import { Link } from "react-router-dom";
 
         {/* Additional Mobile Menu Items */}
         <div className="flex flex-col items-center mb-12">
-          <Link to='#'className="font-paragraph text-text block px-4 py-3 mb-3 leading-loose text-s text-center font-semibold leading-none hover:text-secondary rounded-xl" onClick={toggleNav}>Become a helper</Link>
+          <Link to='/register'className="font-paragraph text-text block px-4 py-3 mb-3 leading-loose text-s text-center font-semibold leading-none hover:text-secondary rounded-xl" onClick={toggleNav}>Become a helper</Link>
           
-          <Link to='#' className="font-paragraph block px-10 py-3 mb-2 leading-loose text-s text-center text-white font-semibold bg-accent hover:bg-red-400  rounded-xl" onClick={toggleNav} >Sign Up</Link>
+          <Link to='/login' className="font-paragraph block px-10 py-3 mb-2 leading-loose text-s text-center text-white font-semibold bg-accent hover:bg-red-400  rounded-xl" onClick={toggleNav} >Sign in</Link>
         </div>
       </div>
 
@@ -78,7 +78,7 @@ import { Link } from "react-router-dom";
               <ul className="hidden lg:flex space-x-6 items-center pl-14">
              
                
-              <li><Link to="#" className="font-paragraph text-l text-text hover:text-secondary" >Home</Link></li>
+              <li><Link to="/" className="font-paragraph text-l text-text hover:text-secondary" >Home</Link></li>
             <li className="text-gray-300">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" className="w-4 h-4 current-fill" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
@@ -113,9 +113,9 @@ import { Link } from "react-router-dom";
             
             {/* Desktop Additional Menu Items */}
         <div>
-            <Link to="#" className="font-paragraph hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 hover:text-secondary text-l text-text font-bold  rounded-xl transition duration-200" >Become a helper</Link>
+            <Link to="/register" className="font-paragraph hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 hover:text-secondary text-l text-text font-bold  rounded-xl transition duration-200" >Become a helper</Link>
             
-            <Link to="#" className="font-paragraph hidden lg:inline-block py-2 px-6 bg-accent hover:bg-red-400 text-l text-white font-bold rounded-xl transition duration-200" >Sign up</Link>
+            <Link to="/login" className="font-paragraph hidden lg:inline-block py-2 px-6 bg-accent hover:bg-red-400 text-l text-white font-bold rounded-xl transition duration-200" >Sign in</Link>
         </div>
     
     </nav>

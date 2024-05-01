@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const helpersShema = new mongoose.Schema({
+const helperShema = new mongoose.Schema({
     email: String,
     password: String,
     
@@ -18,6 +18,6 @@ const helpersShema = new mongoose.Schema({
     
     });
 
-module.exports = mongoose.model('Helpers', helpersShema);
-
-module.exports = Helpers;
+const Helper = mongoose.model('Helper', helperShema);
+module.exports = Helper;
+;

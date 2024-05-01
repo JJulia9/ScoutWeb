@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 
-const cubsSchema = new mongoose.Schema({
+const cubSchema = new mongoose.Schema({
   email: String,
   password: String,
 
@@ -14,10 +14,10 @@ const cubsSchema = new mongoose.Schema({
   address: String, 
   photo: String,
   allergies: String,
-  badges:  [{ type: mongoose.Schema.Types.ObjectId, ref: 'Badge' }],
+//   badges:  [{ type: mongoose.Schema.Types.ObjectId, ref: 'Badge' }],
 
 });
 
-module.exports = mongoose.model('Cubs', cubsSchema);
+const Cub = mongoose.model('Cub', cubSchema);
 
-module.exports = Cubs;
+module.exports = Cub;
