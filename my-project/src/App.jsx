@@ -4,6 +4,9 @@ import Home from './pages/shared/Home';
 import './App.css';
 import Register from './pages/shared/Register.jsx';
 import Login from './pages/shared/Login.jsx';
+import CubDashboard from './pages/cubs/CubDashboard';
+import LeaderDashboard from './pages/leaders/LeaderDashboard';
+import HelperDashboard from './pages/rHelpers/HelperDashboard';
 
 
 function App() {
@@ -21,6 +24,9 @@ function App() {
           <Route path="/gallery" element={<Gallery />} /> */}
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/dashboard/cubs" component={CubDashboard} />
+          <Route path="/dashboard/leaders" component={LeaderDashboard} />
+          <Route path="/dashboard/helpers" component={HelperDashboard} />
 
         </Routes>
       </Router>

@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
           }; 
 
         return (
-            <nav className="w-full flex justify-between items-center py-8 px-10 bg-white z-10">
+            <nav className="max-w-screen-xl flex justify-between m-auto items-center py-8  bg-white z-10">
        
            {/*logo  */}
             <Link to="/" className="text-3xl font-bold leading-none" >

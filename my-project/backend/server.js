@@ -5,9 +5,10 @@ const cors = require('cors');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
-const Cub = require('./model/Cub');
-const Helper = require('./model/Helper');
-const Leader = require('./model/Leader');
+const User = require('./model/User');
+
+
+
 
 
 
@@ -42,11 +43,11 @@ mongoose.connect(MONGO_URI,{
 //   register a helper
 app.post('/api/register', async (req, res) => {
     try {
-        const { email, password, firstName, lastName, dob } = req.body;
+        const { email, password, firstName, lastName, dob, role } = req.body;
 
          // Check if the user already exists
-      const existingHelper = await Helper.findOne({ email });
-      if (existingHelper) {
+      const existingUser = await User.findOne({ email });
+      if (existingUser) {
         return res.status(400).json({ error: 'Helper already exists' });
       }
   
@@ -54,15 +55,17 @@ app.post('/api/register', async (req, res) => {
       const hashedPassword = await bcrypt.hash(password, 10);
 
       // Create a new helper
-        const helper = new Helper({
+        const user = new User({
             email,
             password: hashedPassword,
             firstName,
             lastName,
-            dob
+            dob,
+            role: 'Helper', //assign a role
         });
+
         // Save the helper
-        await helper.save();
+        await user.save();
         // Send a success message
         res.status(201).send('Helper registered successfully');
     } catch (error) {
@@ -72,3 +75,6 @@ app.post('/api/register', async (req, res) => {
 });
 
 
+
+
+//login for a user

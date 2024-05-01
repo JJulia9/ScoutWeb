@@ -10,10 +10,41 @@ const Login = () => {
 
     //error message
     const [errorMessage, setErrorMessage] = useState("");
+    // React Router hook for redirection
+   
 
 
-
+    const handleLogin = async (e) => {
+        e.preventDefault();
     
+        try {
+          const response = await axios.post('http://localhost:5000/login', {
+            email,
+            password,
+          });
+    
+          const { token } = response.data;
+    
+          localStorage.setItem('authToken', token); // Store the token in local storage
+    
+          // Decode the token to get the user role
+          const decoded = jwt_decode(token);
+          const userRole = decoded.role; // Retrieve the user role from the token
+    
+          // Redirect to the appropriate dashboard based on the role
+          if (userRole === 'Cub') {
+            history.push('/dashboard/cubs');
+          } else if (userRole === 'Leader') {
+            history.push('/dashboard/leaders');
+          } else if (userRole === 'Helper') {
+            history.push('/dashboard/helpers');
+          }
+        } catch (err) {
+          setError(err.response?.data?.error || 'Login failed');
+        }
+      };
+
+
     return (
         <>
 
@@ -25,7 +56,8 @@ const Login = () => {
     <div className="flex flex-col items-center w-full pt-5 pr-10 pb-20 pl-10 lg:pt-20 lg:flex-row">
       <div className="w-full bg-cover relative max-w-md lg:max-w-2xl lg:w-7/12">
         <div className="flex flex-col items-center justify-center w-full h-full relative lg:pr-10">
-          <img src="/hiker.svg" className="btn-" alt='hiker'/>
+          <img src="/group.svg" className="btn-" alt='group of people'/>
+          
         </div>
       </div>
 
@@ -34,7 +66,9 @@ const Login = () => {
       <form action="POST" >
         <div className="flex flex-col items-start justify-start pt-10 pr-10 pb-10 pl-10 bg-white shadow-2xl rounded-xl
             relative z-10">
-          <p className="text-secondary w-full text-3xl font-medium text-center leading-snug font-heading pb-2">Sign in to your account</p>
+          <p className="text-secondary w-full text-3xl font-medium text-center leading-snug font-heading pb-2">Welcome back! </p>
+          <p className=" text-accent w-full text-xl font-medium text-center leading-snug font-paragraph">sign in to your account</p>
+
           <div className="w-full mt-6 mr-0 mb-0 ml-0 relative space-y-8">
             
             <div className="relative">
@@ -66,7 +100,7 @@ const Login = () => {
 
             <div className="relative">
               <button type='submit' onClick={handleLogin} className="font-paragraph  w-full inline-block pt-4 pr-5 pb-4 pl-5 text-xl font-medium text-center text-white bg-accent
-                  rounded-xl transition duration-200 hover:bg-red-400 ease">Submit</button>
+                  rounded-xl transition duration-200 hover:bg-red-400 ease">Login</button>
             </div>
             
             {errorMessage && (
