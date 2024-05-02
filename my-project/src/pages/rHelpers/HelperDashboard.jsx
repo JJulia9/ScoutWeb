@@ -1,6 +1,6 @@
 import React from 'react';
 
-const helperDashboard = () => {
+const HelperDashboard = () => {
     return (
         <div>
             <h1>Helper Dashboard</h1>
@@ -8,4 +8,4 @@ const helperDashboard = () => {
     )
 }
 
-export default helperDashboard;
+export default HelperDashboard;

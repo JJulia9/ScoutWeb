@@ -8,7 +8,6 @@ import CubDashboard from './pages/cubs/CubDashboard';
 import LeaderDashboard from './pages/leaders/LeaderDashboard';
 import HelperDashboard from './pages/rHelpers/HelperDashboard';
 
-
 function App() {
   
 
@@ -24,9 +23,9 @@ function App() {
           <Route path="/gallery" element={<Gallery />} /> */}
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/dashboard/cubs" component={CubDashboard} />
-          <Route path="/dashboard/leaders" component={LeaderDashboard} />
-          <Route path="/dashboard/helpers" component={HelperDashboard} />
+          <Route path="/cubdashboard" element={<CubDashboard />} />
+          <Route path="/leaderdashboard" element={<LeaderDashboard />} />
+          <Route path="/helperdashboard" element={<HelperDashboard />} />
 
         </Routes>
       </Router>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const leaderDashboard = () => {
+const LeaderDashboard = () => {
     return (
         <div>
             <h1>Leader Dashboard</h1>
@@ -8,4 +8,4 @@ const leaderDashboard = () => {
     )
 }
 
-export default leaderDashboard;
+export default LeaderDashboard;

@@ -1,48 +1,54 @@
 import React from "react";
 import axios from "axios";
-import { useState } from 'react';
+import { useState} from 'react';
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
+import { useNavigate } from 'react-router-dom'; // If using React Router
+// import * as jwtDecode  from 'jwt-decode';
+import { jwtDecode } from 'jwt-decode';
+
 
 const Login = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+  const navigate = useNavigate();
 
-    //error message
-    const [errorMessage, setErrorMessage] = useState("");
-    // React Router hook for redirection
-   
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post("http://localhost:5000/api/login", {
+        email,
+        password,
+      });
 
+      const { token } = response.data; // Correctly extract the token from response.data
+      if (!token || typeof token !== 'string') {
+        throw new Error('Invalid token received');
+      }
 
-    const handleLogin = async (e) => {
-        e.preventDefault();
-    
-        try {
-          const response = await axios.post('http://localhost:5000/login', {
-            email,
-            password,
-          });
-    
-          const { token } = response.data;
-    
-          localStorage.setItem('authToken', token); // Store the token in local storage
-    
-          // Decode the token to get the user role
-          const decoded = jwt_decode(token);
-          const userRole = decoded.role; // Retrieve the user role from the token
-    
-          // Redirect to the appropriate dashboard based on the role
-          if (userRole === 'Cub') {
-            history.push('/dashboard/cubs');
-          } else if (userRole === 'Leader') {
-            history.push('/dashboard/leaders');
-          } else if (userRole === 'Helper') {
-            history.push('/dashboard/helpers');
-          }
-        } catch (err) {
-          setError(err.response?.data?.error || 'Login failed');
-        }
-      };
+      localStorage.setItem("token", token); // Store the token in local storage
+
+      const decodedToken = jwtDecode(token);
+      const role = decodedToken.role;
+
+      // Redirect based on the user's role
+      if (role === 'Cub') {
+        navigate("/cubdashboard");
+      } else if (role === 'Helper') {
+        navigate("/helperdashboard");
+      } else if (role === 'Leader') {
+        navigate("/leaderdashboard");
+      } else {
+        throw new Error('Unknown role');
+      }
+
+    } catch (error) {
+      console.error(error);
+      setErrorMessage("Invalid credentials");
+    }
+  };
+
 
 
     return (
@@ -63,6 +69,7 @@ const Login = () => {
 
       
       <div className="w-full mt-20 mr-0 mb-0 ml-0 relative z-10 max-w-2xl lg:mt-0 lg:w-5/12">
+
       <form action="POST" >
         <div className="flex flex-col items-start justify-start pt-10 pr-10 pb-10 pl-10 bg-white shadow-2xl rounded-xl
             relative z-10">
@@ -113,6 +120,7 @@ const Login = () => {
           
         </div>
         </form>
+
         <svg viewBox="0 0 91 91" className="absolute top-0 left-0 z-0 w-32 h-32 -mt-12 -ml-12 text-primary
             fill-current"><g stroke="none" strokeWidth="1" fillRule="evenodd"><g fillRule="nonzero"><g><g><circle
             cx="3.261" cy="3.445" r="2.72"/><circle cx="15.296" cy="3.445" r="2.719"/><circle cx="27.333" cy="3.445"

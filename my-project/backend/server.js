@@ -14,8 +14,10 @@ const User = require('./model/User');
 
 
 
+
 // Express server
 const app = express();
+
 
 app.use(cors());
 app.use(express.json());
@@ -77,4 +79,38 @@ app.post('/api/register', async (req, res) => {
 
 
 
+
 //login for a user
+
+const JWT_SECRET = 'your_jwt_secret_key'; // JWT secret key
+
+ 
+app.post('/api/login', async (req, res) => {
+  const { email, password } = req.body;
+
+  //if user exist
+  const user = await User.findOne({ email });
+  if (!user) {
+    return res.status(400).json({ error: 'Invalid credentials' });
+  }
+
+   // Validate password
+   const validPassword = await bcrypt.compare(password, user.password);
+   if (!validPassword) {
+     return res.status(400).json({ error: 'Invalid credentials' });
+   }
+ 
+  // Generate JWT
+  const token = jwt.sign(
+    { email: user.email, role: user.role },
+    JWT_SECRET,
+    { expiresIn: '1h' }
+  );
+ 
+   res.json({ token }); // Return token 
+ });
+
+
+
+      
+      
