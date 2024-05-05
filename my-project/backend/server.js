@@ -1,4 +1,3 @@
-// Purpose: Entry point for the backend server.
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -11,36 +10,129 @@ const User = require('./model/User');
 
 
 
-
-
-
-
-// Express server
 const app = express();
+const PORT = process.env.PORT || 5000;
 
 
-app.use(cors());
 app.use(express.json());
-
-const PORT = process.env.PORT || 5000; //server port
-
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`)); //server running message
+app.use(cors());
 
 // MongoDB connection
-const MONGO_URI = process.env.MONGO_URI;
-mongoose.connect(MONGO_URI,{ 
-   useNewUrlParser: true, 
-   useUnifiedTopology: true,
- })
-  .then(() => console.log('MongoDB connected'))
-  .catch(err => console.error(err));
+const MONGO_URI = process.env.MONGO_URI
+mongoose.connect(MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+mongoose.connection.on('connected', () => {
+  console.log('Connected to MongoDB');
+});
+
+
+app.get('/api/users', async (req, res) => {
+  try {
+    // Extract the token from the request headers
+    const token = req.headers.authorization?.split(' ')[1];
+
+    if (!token) {
+      return res.status(401).json({ error: 'Unauthorized: No token provided' });
+    }
+
+    // Verify the token
+    jwt.verify(token, 'your-secret-key', async (err, decoded) => {
+      if (err) {
+        return res.status(401).json({ error: 'Unauthorized: Invalid token' });
+      }
+      const user = await User.findById(decoded.userId)
+        // .populate('kids')
+        // .populate('department_id')
+        // .populate('doctor_id');
+
+
+      // The decoded.userId should match the structure used in jwt.sign during login
+
+      if (!user) {
+        return res.status(404).json({ error: 'User not found' });
+      }
+
+      // Return data only for the authenticated user
+    // Inside the /api/users route
+            const formattedUser = {
+                _id: user._id,
+                email: user.email,
+                role: user.role,
+                firstName: user.firstName,
+                lastName: user.lastName,
+                dob: user.dob,
+                parentName: user.parentName,
+                parentEmail: user.parentEmail,
+                parentPhone: user.parentPhone,
+                address: user.address,
+                photo: user.photo,
+                allergies: user.allergies,
+                phone: user.phone,
+                training: user.training,
+                disclosureScot: user.disclosureScot,
+                avaibility: user.avaibility,
+
+
+  
+  
+  // Add any additional fields you want to include
+};
 
 
 
+res.json(formattedUser);
+
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+// patient login
+app.post('/api/login', async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    const user = await User.findOne({ email });
+
+    if (!user) {
+      return res.status(401).json({ error: 'Invalid patient email or password' });
+    }
+
+    const passwordMatch = await bcrypt.compare(password, user.password);
+
+    if (!passwordMatch) {
+      return res.status(401).json({ error: 'Invalid patient email or password' });
+    }
+
+    
+
+    // Include is_admin in the token payload
+    const tokenPayload = {
+      userId: user._id,
+      role: user.role,
+    };
+
+    
+    const token = jwt.sign(tokenPayload, 'your-secret-key', {
+      expiresIn: '1h',
+    });
+
+    res.json({ token });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
 
 
 
-
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
 
 //   register a helper
 app.post('/api/register', async (req, res) => {
@@ -78,39 +170,22 @@ app.post('/api/register', async (req, res) => {
 
 
 
+//fetch helpers
+// Endpoint to fetch users with a specific role
+app.get('/api/users/role/helper', async (req, res) => {
+  const { role } = req.params;
 
-
-//login for a user
-
-const JWT_SECRET = 'your_jwt_secret_key'; // JWT secret key
-
- 
-app.post('/api/login', async (req, res) => {
-  const { email, password } = req.body;
-
-  //if user exist
-  const user = await User.findOne({ email });
-  if (!user) {
-    return res.status(400).json({ error: 'Invalid credentials' });
+  try {
+    const users = await User.find({ role: 'Helper'}); // Fetch users with the given role
+    res.json(users); // Return the list of users
+  } catch (error) {
+    console.error('Error fetching users:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
   }
+});
 
-   // Validate password
-   const validPassword = await bcrypt.compare(password, user.password);
-   if (!validPassword) {
-     return res.status(400).json({ error: 'Invalid credentials' });
-   }
- 
-  // Generate JWT
-  const token = jwt.sign(
-    { email: user.email, role: user.role },
-    JWT_SECRET,
-    { expiresIn: '1h' }
-  );
- 
-   res.json({ token }); // Return token 
- });
+        
+        
 
 
-
-      
-      
+  

@@ -20,14 +20,23 @@ const Login = () => {
       const response = await axios.post("http://localhost:5000/api/login", {
         email,
         password,
+        
       });
+      
+      const token = response.data.token; // Correctly set the token variable
+    console.log('Login successful');
+   
 
-      const { token } = response.data; // Correctly extract the token from response.data
-      if (!token || typeof token !== 'string') {
-        throw new Error('Invalid token received');
-      }
+    localStorage.setItem("token", token); // Store token
+    localStorage.setItem("email", email); // Store email or other relevant data
+
+  //  navigate("/leaderdashboard"); // Redirect to the dashboard
+
+    
+     
 
       localStorage.setItem("token", token); // Store the token in local storage
+    
 
       const decodedToken = jwtDecode(token);
       const role = decodedToken.role;
