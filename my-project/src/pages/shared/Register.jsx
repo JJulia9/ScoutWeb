@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-
 // email: String,
 // password: String,
 
@@ -45,6 +44,7 @@ const Register = () => {
   
           console.log("Registration successful");
           // Handle redirection or display a success message
+          window.location.href = '/login'; // Redirect to the login page
           
   
         } catch (error) {

@@ -1,5 +1,10 @@
-import React, { useState} from 'react';
+import React, { useState, useEffect} from 'react';
 import { Link } from "react-router-dom";
+import UserInformation from './UserInformation';
+// import * as jwtDecode  from 'jwt-decode';
+import { jwtDecode } from 'jwt-decode';
+//for redirecting user to the correct dashboard
+import { useNavigate } from 'react-router-dom'; // If using React Router
 
     const Navigation = () => {
         const [isNavOpen, setIsNavOpen] = useState(false);
@@ -7,6 +12,45 @@ import { Link } from "react-router-dom";
         const toggleNav = () => {
             setIsNavOpen(!isNavOpen); // Toggle navigation open/close
           }; 
+
+          const handleLogout = () => {
+            // Clear token from local storage
+            localStorage.removeItem("token");
+            // Redirect user to the login page
+            window.location.href = '/login';
+            };
+
+           
+            //dynamic nav with correct user redicertion to dashboard
+            const user = UserInformation();
+            const [isLoggedIn, setIsLoggedIn] = useState(false);
+            const navigate = useNavigate();
+            const role = user?.role;
+
+            useEffect(() => {
+                console.log("isLoggedIn:", isLoggedIn);
+                // Check if the user is logged in by checking if the token exists in local storage
+                const token = localStorage.getItem('token');
+               
+                if (token) {
+                   // Set login status
+                    setIsLoggedIn(true);
+
+                    // Decode token to get user role
+                    const decodedToken = jwtDecode(token);
+                    const role = decodedToken.role;
+
+                    } else {
+                    // If there's no token, set isLoggedIn to false and navigate to login
+                    setIsLoggedIn(false);
+                    navigate('/login');
+                    }
+
+            }
+            , [navigate]); // Run only once when the component mounts
+
+            
+
 
         return (
             <nav className="mx-auto max-w-screen-xl px-4 py-8 flex justify-between m-auto items-center  bg-white z-10">
@@ -65,12 +109,46 @@ import { Link } from "react-router-dom";
                         </li>
         </ul>
 
-        {/* Additional Mobile Menu Items */}
+      
+
+          {isLoggedIn ? (
+                    <>
+                        {user&&(
+                        
+                        <Link to ={
+                            role === 'Leader'
+                              ? '/leaderdashboard'
+                              : role === 'Cub'
+                              ? '/cubdashboard'
+                              : '/helperdashboard' // Default if the role is 'Helper'
+                          }
+                          className="focus:border-b-2 border-transparent focus:border-secondary flex px-5 items-center py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
+                  <img className="rounded-full h-10 w-10 object-cover" src={user.photo} alt="profilePic" onClick={toggleNav} />
+                       </Link>
+                        )}
+
+                        <button  onClick={() => { 
+                            handleLogout(); 
+                            toggleNav(); 
+                        }} className="font-paragraph block px-10 py-3 mb-2 leading-loose text-s text-center text-white font-semibold bg-accent hover:bg-red-400  rounded-xl">Sign out</button>
+                        
+                    </>
+
+                ) : (
+                    <> 
+                      {/* Additional Mobile Menu Items */}
         <div className="flex flex-col items-center mb-12">
           <Link to='/register'className="font-paragraph text-text block px-4 py-3 mb-3 leading-loose text-s text-center font-semibold leading-none hover:text-secondary rounded-xl" onClick={toggleNav}>Become a helper</Link>
           
           <Link to='/login' className="font-paragraph block px-10 py-3 mb-2 leading-loose text-s text-center text-white font-semibold bg-accent hover:bg-red-400  rounded-xl" onClick={toggleNav} >Sign in</Link>
-        </div>
+          </div>
+                    </>
+                )}
+
+
+        
+
+       
       </div>
 
          
