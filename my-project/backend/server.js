@@ -4,7 +4,10 @@ const cors = require('cors');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
+const multer = require('multer');
 const User = require('./model/User');
+const Post = require('./model/Posts');
+
 
 
 
@@ -75,10 +78,14 @@ app.get('/api/users', async (req, res) => {
                 disclosureScot: user.disclosureScot,
                 avaibility: user.avaibility,
 
-
+                post_id: user.post_id ? {
+                    title: user.post_id.title,
+                    about: user.post_id.about,
+                    picture: user.post_id.picture,
+                } : null,
+                
   
-  
-  // Add any additional fields you want to include
+  //  any additional fields to include
 };
 
 
@@ -184,8 +191,70 @@ app.get('/api/users/role/helper', async (req, res) => {
   }
 });
 
+
+// Serve the uploads folder as static files
+app.use("/uploads", express.static("uploads"));
         
-        
+//fetch posts
+app.get('/api/posts', async (req, res) => {
+  try {
+    const posts = await Post.find();
+    res.json(posts);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
 
 
-  
+//format for the post's pictures
+const path = require("path"); // Needed to handle file extensions
+
+// Custom storage configuration for Multer
+const storage = multer.diskStorage({
+  // Specify the destination folder
+  destination: function (req, file, cb) {
+    cb(null, "uploads/"); // Ensure "uploads" folder exists
+  },
+  // Set the filename to the original with a unique prefix (like timestamp) to avoid collisions
+  filename: function (req, file, cb) {
+    const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
+    const extension = path.extname(file.originalname); // Extract the file extension
+    const baseName = path.basename(file.originalname, extension); // Get the base filename without extension
+
+    // Combine base filename with unique suffix and original extension
+    const newFilename = `${baseName}-${uniqueSuffix}${extension}`;
+    cb(null, newFilename);
+  },
+});
+
+const upload = multer({ storage }); // Use the custom storage
+
+
+
+
+
+// const upload = multer({ dest: "uploads/" }); // Specify a directory to store uploaded files
+
+
+//add a post 
+app.post("/api/posts", upload.single("picture"), async (req, res) => { // Using multer to handle file uploads
+  try {
+    const { title, about } = req.body;
+    const picture = req.file?.filename; // The filename of the uploaded picture
+
+    const post = new Post({
+      // user_id: req.user._id,
+      title,
+      about,
+      picture,
+    });
+
+    await post.save();
+    res.status(201).json(post);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+

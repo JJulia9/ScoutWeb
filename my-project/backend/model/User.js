@@ -34,6 +34,9 @@ const userSchema = new mongoose.Schema({
 // password: String,
 // photo: String,
 
+//post user id adding
+// posts: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Post' }],
+
 
 });
 

@@ -3,6 +3,7 @@
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -15,7 +16,7 @@ module.exports = {
       colors: {
         'background': '#FFFAF5',
         'primary': '#F1B22D',
-        'secondary': '#277368',
+        'secondary': '#1A4E38',
         'accent': '#B12B22',
         'text': '#2C2C2C',
         'shade': '#90D3C9',

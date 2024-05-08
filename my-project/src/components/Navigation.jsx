@@ -28,8 +28,7 @@ import { useNavigate } from 'react-router-dom'; // If using React Router
             const role = user?.role;
 
             useEffect(() => {
-                console.log("isLoggedIn:", isLoggedIn);
-                // Check if the user is logged in by checking if the token exists in local storage
+                
                 const token = localStorage.getItem('token');
                
                 if (token) {
@@ -43,7 +42,7 @@ import { useNavigate } from 'react-router-dom'; // If using React Router
                     } else {
                     // If there's no token, set isLoggedIn to false and navigate to login
                     setIsLoggedIn(false);
-                    navigate('/login');
+                    
                     }
 
             }
@@ -53,7 +52,7 @@ import { useNavigate } from 'react-router-dom'; // If using React Router
 
 
         return (
-            <nav className="mx-auto max-w-screen-xl px-4 py-8 flex justify-between m-auto items-center  bg-white z-10">
+            <nav className="mx-auto max-w-screen-xl px-4 py-8 flex justify-between m-auto items-center  bg-white z-10 rounded-lg">
        
            {/*logo  */}
             <Link to="/" className="text-3xl font-bold leading-none" >
@@ -122,8 +121,8 @@ import { useNavigate } from 'react-router-dom'; // If using React Router
                               ? '/cubdashboard'
                               : '/helperdashboard' // Default if the role is 'Helper'
                           }
-                          className="focus:border-b-2 border-transparent focus:border-secondary flex px-5 items-center py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
-                  <img className="rounded-full h-10 w-10 object-cover" src={user.photo} alt="profilePic" onClick={toggleNav} />
+                          className="absolute top-0 left-0 p-4 focus:border-b-2 border-transparent focus:border-secondary focus:outline-none transition duration-150 ease-in-out">
+                  <img className="rounded-full h-12 w-12 object-cover" src={user.photo} alt="profilePic" onClick={toggleNav} />
                        </Link>
                         )}
 
@@ -190,12 +189,41 @@ import { useNavigate } from 'react-router-dom'; // If using React Router
         </ul>
             
             {/* Desktop Additional Menu Items */}
+
+            {isLoggedIn ? ( 
+                <div className="flex flex-row"> 
+                     {user&&(
+                        
+                        <Link to ={
+                            role === 'Leader'
+                              ? '/leaderdashboard'
+                              : role === 'Cub'
+                              ? '/cubdashboard'
+                              : '/helperdashboard' // Default if the role is 'Helper'
+                          }
+                          className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 hover:text-secondary text-l">
+                  <img className="rounded-full h-12 w-12 object-cover" src={user.photo} alt="profilePic" onClick={toggleNav} />
+                       </Link>
+                        )}
+
+                        <button  onClick={() => { 
+                            handleLogout(); 
+                            toggleNav(); 
+                        }} className="font-paragraph hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 hover:text-secondary text-l text-text font-bold  rounded-xl transition duration-200" >Sign out</button>
+                
+                </div>
+                
+            ) : (
+                
         <div>
             <Link to="/register" className="font-paragraph hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 hover:text-secondary text-l text-text font-bold  rounded-xl transition duration-200" >Become a helper</Link>
             
             <Link to="/login" className="font-paragraph hidden lg:inline-block py-2 px-6 bg-accent hover:bg-red-400 text-l text-white font-bold rounded-xl transition duration-200" >Sign in</Link>
         </div>
-    
+
+            )}
+
+               
     </nav>
 
     )
