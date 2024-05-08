@@ -7,6 +7,7 @@ import Login from './pages/shared/Login.jsx';
 import CubDashboard from './pages/cubs/CubDashboard';
 import LeaderDashboard from './pages/leaders/LeaderDashboard';
 import HelperDashboard from './pages/rHelpers/HelperDashboard';
+import Badges from './pages/shared/Badges';
 
 function App() {
   
@@ -26,6 +27,8 @@ function App() {
           <Route path="/cubdashboard" element={<CubDashboard />} />
           <Route path="/leaderdashboard" element={<LeaderDashboard />} />
           <Route path="/helperdashboard" element={<HelperDashboard />} />
+
+          <Route path="/badges" element={<Badges />} />
 
         </Routes>
       </Router>

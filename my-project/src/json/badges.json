@@ -1,0 +1,100 @@
+[
+
+    {
+        "id": "1",
+        "name": "Activity",
+        "picture": "/badges/Activity.png" 
+    },
+
+
+    {
+        "id": "2",
+        "name": "Athletics",
+        "picture" : "/badges/Athletics.png"
+    },
+
+    {
+        "id": "3",
+        "name": "Equestrian",
+        "picture" : "/badges/Equestrian.png"
+    },
+
+    {
+        "id": "4",
+        "name": "Fighter",
+        "picture" : "/badges/Fighter.png"
+    },
+
+    {
+        "id": "5",
+        "name": "Forester",
+        "picture" : "/badges/Forester.png"
+    },
+    
+    {
+        "id": "6",
+        "name": "HillWalker",
+        "picture" : "/badges/HillWalker.png"
+    },
+
+    {
+        "id": "7",
+        "name": "Hobbies",
+        "picture" : "/badges/Hobbies.png"
+    },
+
+    {
+        "id": "8",
+        "name": "Leader",
+        "picture" : "/badges/Leader.png"
+    },
+
+    {
+        "id": "9",
+        "name": "Life Saver",
+        "picture" : "/badges/Lifesaver.png"
+    },
+
+    {
+        "id": "10",
+        "name": "Local Knowledge",
+        "picture" : "/badges/LocalKnowledge.png"
+    },
+
+    {
+        "id": "11",
+        "name": "Musician",
+        "picture" : "/badges/Musician.png"
+    },
+
+    {
+        "id": "12",
+        "name": "Orienteer",
+        "picture" : "/badges/Orienteer.png"
+    },
+
+    {
+        "id": "13",
+        "name": "Scientist",
+        "picture" : "/badges/Scientist.png"
+    },
+
+    {
+        "id": "14",
+        "name": "Swimmer",
+        "picture" : "/badges/Swimmer.png"
+    },
+
+    {
+        "id": "15",
+        "name": "Team worker",
+        "picture" : "/badges/Teamworker.png"
+    },
+
+    {
+        "id": "16",
+        "name": "World Faith",
+        "picture" : "/badges/WorldFaith.png"
+    }
+
+]
