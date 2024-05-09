@@ -99,7 +99,9 @@ res.json(formattedUser);
   }
 });
 
-// patient login
+
+
+//  login
 app.post('/api/login', async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -258,3 +260,52 @@ app.post("/api/posts", upload.single("picture"), async (req, res) => { // Using 
   }
 });
 
+
+
+
+//helpers avaible days posting to database from submit form
+app.post('/user/:id/avaibility', async (req, res) => {
+  const { id } = req.params;
+  const { date } = req.body;
+
+  if (!date) {
+    return res.status(400).send({ error: 'Date is required' });
+  }
+
+  try {
+    const user = await User.findById(id);
+
+    if (!user) {
+      return res.status(404).send({ error: 'User not found' });
+    }
+
+    user.avaibility.push({ date });
+    await user.save();
+
+    res.status(201).send(user);
+  } catch (error) {
+    res.status(500).send({ error: 'Server error' });
+  }
+});
+
+
+
+
+
+
+//get all avaible days for a helper
+app.get('/user/:id/avaibility', async (req, res) => {
+  const { id } = req.params;
+
+  try {
+      const user = await User.findById(id);
+
+      if (!user) {
+          return res.status(404).send({ error: 'User not found' });
+      }
+
+      res.status(200).send(user.avaibility);
+  } catch (error) {
+      res.status(500).send({ error: 'Server error' });
+  }
+});

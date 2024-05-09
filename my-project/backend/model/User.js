@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 
+
 const userSchema = new mongoose.Schema({
   email: String,
   password: String,
@@ -27,7 +28,7 @@ const userSchema = new mongoose.Schema({
     // address: String,
     training: Array,
     disclosureScot: Boolean,
-    avaibility: Array,
+    avaibility: Array, // Ensure correct sub-schema
 
 //   leader info
 // email: String,

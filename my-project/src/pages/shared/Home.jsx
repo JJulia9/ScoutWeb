@@ -5,12 +5,13 @@ import { Link } from "react-router-dom";
 import Gallery from "../../components/Gallery";
 import UploadForm from "../../components/UploadForm";
 
-
-
-
 const Home = () => {
+    
+    
     return(
         <>
+        
+
             <Navigation />
         <div className="h-5/6 bg-[url('/pattern.svg')] ">
 
@@ -235,6 +236,8 @@ const Home = () => {
 
 <Gallery />
 <UploadForm />  
+
+
 
         <Footer />
    
