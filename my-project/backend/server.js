@@ -294,18 +294,25 @@ app.post('/user/:id/avaibility', async (req, res) => {
 
 
 //get all avaible days for a helper
-app.get('/user/:id/avaibility', async (req, res) => {
-  const { id } = req.params;
-
+// Assuming you have a User model with an availability field
+app.get('/api/avaibility/all', async (req, res) => {
   try {
-      const user = await User.findById(id);
+    const allUsers = await User.find({}, ' firstName lastName avaibility'); // Get availability for all users
 
-      if (!user) {
-          return res.status(404).send({ error: 'User not found' });
-      }
+    const allAvaibility = allUsers.flatMap((user) =>
+      user.avaibility.map((entry) => ({
+        userId: user._id,
+        firstName: user.firstName, // Include the first name
+        lastName: user.lastName,   // Include the last name
+        date: entry.date,
+        email: user.email,
+      }))
+    );
 
-      res.status(200).send(user.avaibility);
+    res.json(allAvaibility);
+    
   } catch (error) {
-      res.status(500).send({ error: 'Server error' });
+    console.error('Error fetching availability:', error);
+    res.status(500).json({ error: 'Server error' });
   }
 });

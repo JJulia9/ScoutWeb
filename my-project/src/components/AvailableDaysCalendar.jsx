@@ -5,50 +5,60 @@ import { parseISO, startOfWeek, getDay } from 'date-fns';
 import { dateFnsLocalizer } from 'react-big-calendar';
 import axios from 'axios';
 
-const locales = {
-  'en-GB': require('date-fns/locale/en-GB'), // Adjust locale if needed
-};
+import enGB from 'date-fns/locale/en-GB';
 
 const localizer = dateFnsLocalizer({
-  format,
-  parse: (dateStr, formatStr, locale) => parseISO(dateStr),
-  startOfWeek: () => startOfWeek(new Date(), { locale: locales['en-GB'] }),
+  format: (date, formatString, locale) => date.toLocaleString(locale),
+  parse: (dateStr) => parseISO(dateStr),
+  startOfWeek: () => startOfWeek(new Date(), { locale: enGB }),
   getDay: (date) => getDay(date),
-  locales,
+  locales: { 'en-GB': enGB },
 });
 
-const AvailableDaysCalendar = ({ userId }) => {
+const AllUsersCalendar = () => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    // Fetch availability data from the backend
     axios
-      .get(`/user/${userId}/availability`)
+      .get('http://localhost:5000/api/avaibility/all') // Endpoint to fetch all users' availability
       .then((response) => {
-        const formattedEvents = response.data.map((item) => ({
-          start: parseISO(item.date), // Convert to a Date object
-          end: parseISO(item.date), // Same for start and end to mark specific days
-          title: item.comments || 'Available', // Add comments or a default title
-        }));
-        setEvents(formattedEvents);
+        if (Array.isArray(response.data)) {
+          const formattedEvents = response.data.map((item) => {
+            if (!item.date) return null; // Ensure there's a date to process
+            const parsedDate = parseISO(item.date);
+            return {
+              start: parsedDate,
+              end: parsedDate,
+              title: `${item.firstName} ${item.lastName}`, // No comments, just user info
+            };
+          }).filter(Boolean); // Remove any null values
+
+          setEvents(formattedEvents); // Set the formatted events
+        } else {
+          console.error('Expected an array, but got:', response.data);
+        }
       })
       .catch((error) => console.error('Error fetching available days:', error));
-  }, [userId]); // Dependency on userId to refetch when it changes
+  }, []); // Ensure this runs once when the component is mounted
 
   return (
     <div>
-      <h2>Helper Availability Calendar</h2>
-      <Calendar
-        localizer={localizer}
-        events={events}
-        startAccessor="start"
-        endAccessor="end"
-        views={['month', 'week', 'day']} // Available views
-        defaultView={Views.MONTH} // Default view
-        style={{ height: 500 }} // Specific height
-      />
+      <h2>All Users Availability Calendar</h2>
+      {events.length > 0 ? (
+        <Calendar
+          localizer={localizer}
+          events={events}
+          startAccessor="start"
+          endAccessor="end"
+          views={['month', 'week', 'day']} // Default calendar views
+          defaultView={Views.MONTH}
+          style={{ height: 500 }}
+        />
+      ) : (
+        <p>No available days to display.</p>
+      )}
     </div>
   );
 };
 
-export default AvailableDaysCalendar;
+export default AllUsersCalendar;
