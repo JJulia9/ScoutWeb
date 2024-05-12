@@ -27,7 +27,7 @@ const Gallery = () => {
        
 
       return (
-        <div className="flex min-h-screen items-center justify-center bg-background">
+        <div className="flex items-center justify-center bg-background">
         <div className="grid grid-cols-1 gap-5 md:grid-cols-3 lg:grid-cols-4">
 
         {posts.map((post) => {

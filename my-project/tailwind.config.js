@@ -18,8 +18,9 @@ module.exports = {
         'primary': '#F1B22D',
         'secondary': '#1A4E38',
         'accent': '#B12B22',
-        'text': '#2C2C2C',
-        'shade': '#90D3C9',
+        'text': '#B9B9B9',
+        'nav': '#1E1E1E',
+        'shade': '#476F5E',
        
       },
       

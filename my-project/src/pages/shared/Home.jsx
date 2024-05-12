@@ -12,230 +12,376 @@ const Home = () => {
         <>
         
 
-            <Navigation />
-        <div className="h-5/6 bg-[url('/pattern.svg')] ">
-
-            <section className="h-full justify-center items-center lg:pt-9 ">
-                    <div className="items-center pt-12 px-8 mx-auto max-w-7xl lg:px-16 md:px-12 ">
-                    <div className="justify-center w-full text-center lg:p-10 max-auto">
-                        <div className="justify-center w-full mx-auto">
-
-
-                        <p className="sm:mt-8 mt-3 sm:px-44 text-accent text-2xl sm:text-4xl font-bold font-heading">
-                         <span className="text-3xl sm:text-7xl">Adventure </span><br/> Begins Here
-                        </p>
-
-                        <p className="sm:mt-8 mt-2.5 text-text sm:px-72 sm:text-xl  sm:leading-loose text-l font-semibold  p-2">
-                        Empowering the Next  <span className="font-bold text-secondary"> Generation of Scouts!</span>
-                        </p>
-                        </div>
-                    </div>
-                
-                    </div>
             
-
-
-                    <div className="text-center space-x-6 mt-4">
-                     <Link to="/" className="font-paragraph  lg:inline-block py-4 px-8 bg-secondary hover:bg-red-400 text-l text-white font-bold rounded-xl transition duration-200" >Let's meet</Link>
-                    </div>
-
-
-                        <div className="flex flex-col items-center justify-center max-w-xl  mx-auto lg:flex-row z-0">
-                        <img
-                            className='w-9/12 '
-                            src='/scouts.svg'
-                        />
-                        </div>
-
-            </section>
-  
-        </div>
-
-       
-
-
-
-            <section className="relative pt-16 bg-background">
-            <div className="container mx-auto">
-            <div className="flex flex-wrap items-center">
-                <div className="w-10/12 md:w-6/12 lg:w-4/12 px-12 md:px-4 mr-auto ml-auto -mt-78">
-                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-500">
-                    <img alt="..." src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=700&amp;q=80" className="w-full align-middle rounded-t-lg"/>
-                    <blockquote className="relative p-8 mb-4">
-                    <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95" className="absolute left-0 w-full block h-95-px -top-94-px">
-                        <polygon points="-30,95 583,95 583,65" className="text-pink-500 fill-current"></polygon>
-                    </svg>
-                    <h4 className="text-xl font-bold text-white">
-                        Great for your awesome project
-                    </h4>
-                    <p className="text-md font-light mt-2 text-white">
-                        Putting together a page has never been easier than matching
-                        together pre-made components. From landing pages presentation
-                        to login areas, you can easily customise and built your pages.
+                    <div className="h-screen bg-[url('/pattern.svg')] ">
+                    <Navigation />
+                    <section className="h-full justify-center items-center">
+            <div className="pt-12 px-4 sm:px-8 mx-auto max-w-7xl lg:px-16 md:px-12">
+                <div className="text-center lg:p-10 max-auto">
+                <div className="mx-auto pt-9">
+                    <p className="sm:mt-8 mt-3 sm:px-10 text-accent text-3xl sm:text-5xl font-bold font-heading">
+                    <span className="text-4xl sm:text-7xl">ADVENTURE </span><br/> 
+                    Begins Here
                     </p>
-                    </blockquote>
+                
+                    <p className="sm:mt-8 mt-2.5 sm:px-20 sm:text-xl sm:leading-loose text-l font-semibold p-2">
+                    Empowering the Next <span className="font-bold text-secondary">Generation of Scouts!</span>
+                    </p>
                 </div>
                 </div>
 
-                <div className="w-full md:w-6/12 px-4">
-                <div className="flex flex-wrap">
-                    <div className="w-full md:w-6/12 px-4">
-                    <div className="relative flex flex-col mt-4">
-                        <div className="px-4 py-5 flex-auto">
-                        <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
-                            <i className="fas fa-sitemap"></i>
-                        </div>
-                        <h6 className="text-xl mb-1 font-semibold">CSS Components</h6>
-                        <p className="mb-4 text-blueGray-500">
-                            Notus JS comes with a huge number of Fully Coded CSS
-                            components.
-                        </p>
-                        </div>
-                    </div>
-                    <div className="relative flex flex-col min-w-0">
-                        <div className="px-4 py-5 flex-auto">
-                        <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
-                            <i className="fas fa-drafting-compass"></i>
-                        </div>
-                        <h6 className="text-xl mb-1 font-semibold">
-                            JavaScript Components
-                        </h6>
-                        <p className="mb-4 text-blueGray-500">
-                            We also feature many dynamic components for React, NextJS,
-                            Vue and Angular.
-                        </p>
-                        </div>
-                    </div>
-                    </div>
-                    <div className="w-full md:w-6/12 px-4">
-                    <div className="relative flex flex-col min-w-0 mt-4">
-                        <div className="px-4 py-5 flex-auto">
-                        <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
-                            <i className="fas fa-newspaper"></i>
-                        </div>
-                        <h6 className="text-xl mb-1 font-semibold">Pages</h6>
-                        <p className="mb-4 text-blueGray-500">
-                            This extension also comes with 3 sample pages. They are
-                            fully coded so you can start working instantly.
-                        </p>
-                        </div>
-                    </div>
-                    <div className="relative flex flex-col min-w-0">
-                        <div className="px-4 py-5 flex-auto">
-                        <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
-                            <i className="fas fa-file-alt"></i>
-                        </div>
-                        <h6 className="text-xl mb-1 font-semibold">Documentation</h6>
-                        <p className="mb-4 text-blueGray-500">
-                            Built by developers for developers. You will love how easy
-                            is to to work with Notus JS.
-                        </p>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
+
+                
             </div>
+
+
+            <div className="text-center mt-4 pt-3 lg:pb-8 m-2">
+                <Link to="/" className="font-paragraph py-4 px-8 bg-secondary hover:bg-shade text-lg sm:text-xl text-white font-bold rounded-xl transition duration-200">Let's meet</Link>
             </div>
-            <footer className="relative bg-blueGray-50 pt-8 pb-6 mt-2">
-            <div className="container mx-auto px-4">
-                <div className="flex flex-wrap items-center md:justify-between justify-center">
-                <div className="w-full md:w-6/12 px-4 mx-auto text-center">
-                    <div className="text-sm text-blueGray-500 font-semibold py-1">
-                    Made with <a href="https://www.creative-tim.com/product/notus-js" className="text-blueGray-500 hover:text-gray-800" target="_blank">Notus JS</a> by <a href="https://www.creative-tim.com" className="text-blueGray-500 hover:text-blueGray-800" target="_blank"> Creative Tim</a>.
-                    </div>
-                </div>
-                </div>
+
+            <div className="flex items-center justify-center w-full absolute bottom-0">
+                <img
+                className='w-1/2 sm:w-1/4'
+                src='/scouts.svg'
+                />
             </div>
-            </footer>
+            
             </section>
-       
 
+            
+                    </div>
 
-<div className="grid grid-flow-row-dense grid-cols-2 grid-rows-2">
-                <div className="col-span-2">01</div>
-                <div className="col-span-1">02</div>
-                <div className="col-span-1">03</div>
-        </div>
+            
+     
+            <div className="bg-background">
+                <div className="flex items-center justify-center w-1/2 m-auto">
+                    <div className="pt-40 pb-10 text-center px-5 sm:px-0">
+                        <h3 className="text-3xl sm:text-4xl text-primary font-heading pb-10">
+                            <span className="block"> WELCOME</span>
+                            to Obanshire Cub Scouts
+                        </h3>
 
-
-
-        {/* <div class="bg-white dark:bg-gray-800 h-screen h-full py-6 sm:py-8 lg:py-12">
-    <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-        <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
-            <div class="flex items-center gap-12">
-                <h2 class="text-2xl font-bold text-gray-800 lg:text-3xl dark:text-white">Gallery</h2>
-
-                <p class="hidden max-w-screen-sm text-gray-500 dark:text-gray-300 md:block">
-                    This is a section of some simple filler text,
-                    also known as placeholder text. It shares some characteristics of a real written text.
-                </p>
+                        <p className="text-text font-paragraph text-m sm:text-xl  tracking-wide">
+                        Our club has been dedicated to providing enriching experiences for children and youth for over a decade. Through exciting outdoor adventures, skill-building activities, and community service projects, we aim to instill values of leadership, teamwork, and resilience in our Scouts
+                                            
+                        </p>
+                        
+                    </div>
+                </div>
             </div>
+            
 
-            <a href="#"
-                class="inline-block rounded-lg border bg-white dark:bg-gray-700 dark:border-none px-4 py-2 text-center text-sm font-semibold text-gray-500 dark:text-gray-200 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-100 focus-visible:ring active:bg-gray-200 md:px-8 md:py-3 md:text-base">
-                More
-            </a>
+
+
+
+
+
+            <div class="bg-background h-full pb-6 sm:pb-8 lg:pb-12">
+            <div class="mx-auto  max-w-screen-xl  px-4 md:px-8">
+              
+            
+
+                <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8 pt-5">
+                    
+                    <Link to="/"
+                        class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
+                        <img src="/3.jpg" loading="lazy" alt="Photo by from image bank" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+
+                        <div
+                            class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                        </div>
+
+                        <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg font-heading">Games</span>
+                    </Link>
+                
+
+                    
+                    <Link to="/"
+                        class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
+                        <img src="/4.jpg" loading="lazy" alt="Photo from image bank" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+
+                        <div
+                            class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                        </div>
+
+                        <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg font-heading">Info for helpers</span>
+                    </Link>
+                
+
+                    
+                    <Link to="/"
+                        class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
+                        <img src="/5.jpg" loading="lazy" alt="Photo from image bank" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+
+                        <div
+                            class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                        </div>
+
+                        <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg font-heading">Training</span>
+                    </Link>
+                
+
+                    
+                    <Link to="/"
+                        class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
+                        <img src="/9.jpg" loading="lazy" alt="Photo from image bank" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+
+                        <div
+                            class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                        </div>
+
+                        <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg font-heading">Gallery</span>
+                    </Link>
+                
+                </div>
+            </div>
         </div>
 
-        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
-            
-            <a href="#"
-                class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
-                <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Minh Pham" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
 
-                <div
-                    class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+        
+<div class="flex items-center justify-center  bg-background  pt-28 pb-10">
+    <div class="flex flex-col">
+        <div class="flex flex-col ">
+            <div class="container max-w-7xl px-4">
+                <div class="flex flex-wrap justify-center text-center mb-5">
+                    <div class="w-full px-4">
+                        <h4 className="text-2xl sm:text-3xl text-secondary font-heading pb-10">
+                            Our Team
+                        </h4>
+                        
+                    </div>
                 </div>
 
-                <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">VR</span>
-            </a>
-           
 
-            
-            <a href="#"
-                class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
-                <img src="https://images.unsplash.com/photo-1542759564-7ccbb6ac450a?auto=format&q=75&fit=crop&w=1000" loading="lazy" alt="Photo by Magicle" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+                <div class="flex flex-wrap max-w-7xl">
+                    <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                        <div class="flex flex-col">
+                        <div className="h-96 w-72">
+                                <img class="h-full w-full object-cover rounded-xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                                     src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=2561&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Profile picture"/>
+                            </div>
 
-                <div
-                    class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                            <div class="text-center mt-6">
+                                <h1 class="text-secondary font-heading text-xl font-bold mb-1">
+                                Sarah Thompson
+                                </h1>
+
+                                <div class="text-text font-paragraph font-light mb-2">
+                                    Founder & Director
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+
+
+                    <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                        <div class="flex flex-col">
+                        <div className="h-96 w-72">
+                                <img class="h-full w-full object-cover rounded-xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Profile picture"/>
+                            </div>
+                            <div class="text-center mt-6">
+                                <h1 class="text-secondary font-heading text-xl font-bold mb-1">
+                                Michael Patel 
+                                </h1>
+
+                                <div class="text-text font-paragraph font-light mb-2">
+                                Volunteer Coordinator
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+
+
+                    <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                        <div class="flex flex-col">
+                        <div className="h-96 w-72">
+                                <img class="h-full w-full object-cover rounded-xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                                    src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Profile picture"/>
+                            </div>
+
+                            <div class="text-center mt-6">
+                                <h1 class="text-secondary font-heading text-xl font-bold mb-1">
+                                Emily Rodriguez 
+                                </h1>
+
+                                <div class="text-text font-paragraph font-light mb-2">
+                                Outdoor Education Specialist
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+
+
+                    <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                        <div class="flex flex-col">
+                        <div className="h-96 w-72">
+                                <img class="h-full w-full object-cover rounded-xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                                    src="https://images.unsplash.com/photo-1522556189639-b150ed9c4330?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Profile picture"/>
+                            </div>
+
+                            <div class="text-center mt-6">
+                                <h1 class="text-secondary font-heading text-xl font-bold mb-1">
+                                David Lee 
+                                </h1>
+
+                                <div class="text-text font-paragraph font-light mb-2">
+                                   Head Leader
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                   
                 </div>
-
-                <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Tech</span>
-            </a>
-           
-
-            
-            <a href="#"
-                class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
-                <img src="https://images.unsplash.com/photo-1610465299996-30f240ac2b1c?auto=format&q=75&fit=crop&w=1000" loading="lazy" alt="Photo by Martin Sanchez" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-
-                <div
-                    class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
-                </div>
-
-                <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Dev</span>
-            </a>
-           
-
-            
-            <a href="#"
-                class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
-                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Lorenzo Herrera" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-
-                <div
-                    class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
-                </div>
-
-                <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Retro</span>
-            </a>
-           
+            </div>
         </div>
     </div>
-</div> */}
 
-<Gallery />
-<UploadForm />  
+    <div class="flex flex-wrap justify-center text-center  p-10 bg-shade">
+                    <div class="w-full px-4">
+                        <h4 className="text-2xl sm:text-3xl text-primary font-heading">
+                            Join Us
+                        </h4>
+
+
+                        <p className="text-white font-paragraph text-m sm:text-xl  tracking-wide py-2">
+                         and get ready to embark on the adventure with us
+                        </p>
+
+
+                        <div className="text-center mt-10 pt-3  m-2">
+                        <Link to="/" className="font-paragraph py-4 px-8 bg-primary hover:bg-red-400 text-lg sm:text-xl text-white font-bold rounded-xl transition duration-200">Become a helper</Link>
+                         </div>
+                
+                       
+                    </div>
+                </div>
+
+
+<div class=" mx-auto px-5 bg-background min-h-sceen py-40">
+	<div class="flex flex-col items-center">
+    <h4 className="text-2xl sm:text-3xl text-accent font-heading">
+                            FAQ
+                        </h4>
+		<p class="text-text font-paragraph text-xl mt-3 tracking-wide ">
+			frequenty asked questions
+		</p>
+	</div>
+	<div class="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8">
+		
+        
+        <div class="py-5">
+			<details class="group">
+				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+					<span className="text-nav font-paragraph font-semibold tracking-wide"> Who can join Obanshire Cub Scouts?</span>
+					<span class="transition group-open:rotate-180">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+</svg>
+              </span>
+				</summary>
+				<p class="text-text font-medium font-paragraph tracking-wide mt-3 group-open:animate-fadeIn">
+                Obanshire Cub Scouts welcomes children and youth aged 8 to 10, providing an enriching experience for growth and development, and helpers all ages.
+				</p>
+			</details>
+		</div>
+
+        <div class="py-5">
+			<details class="group">
+				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+					<span className="text-nav font-paragraph font-semibold tracking-wide"> What are the benefits of joining Obanshire Cub Scouts?</span>
+					<span class="transition group-open:rotate-180">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+</svg>
+              </span>
+				</summary>
+				<p class="text-text font-medium font-paragraph tracking-wide mt-3 group-open:animate-fadeIn">
+                Obanshire Cub Scouts offers a platform for fostering leadership skills, outdoor adventures, community service opportunities, and lifelong friendships.
+				</p>
+			</details>
+		</div>
+
+        <div class="py-5">
+			<details class="group">
+				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+					<span className="text-nav font-paragraph font-semibold tracking-wide"> Are there any specific requirements for joining?</span>
+					<span class="transition group-open:rotate-180">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+</svg>
+              </span>
+				</summary>
+				<p class="text-text font-medium font-paragraph tracking-wide mt-3 group-open:animate-fadeIn">
+                To join  Obanshire Cub Scouts, future cubs must meet the age requirements and adhere to the principles of inclusivity, respect, and cooperation. Future helpers must be willing to undergo a background check and have a Disclosure Scotland.
+				</p>
+			</details>
+		</div>
+    
+        <div class="py-5">
+			<details class="group">
+				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+					<span className="text-nav font-paragraph font-semibold tracking-wide"> How can I register my child for Obanshire Cub Scouts?</span>
+					<span class="transition group-open:rotate-180">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+</svg>
+              </span>
+				</summary>
+				<p class="text-text font-medium font-paragraph tracking-wide mt-3 group-open:animate-fadeIn">
+                 Registration for Obanshire Cub Scouts can be done only  contacting us via email.
+				</p>
+			</details>
+		</div>
+
+        <div class="py-5">
+			<details class="group">
+				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+					<span className="text-nav font-paragraph font-semibold tracking-wide"> How can I register as a helper for Obanshire Cub Scouts?</span>
+					<span class="transition group-open:rotate-180">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+</svg>
+              </span>
+				</summary>
+				<p class="text-text font-medium font-paragraph tracking-wide mt-3 group-open:animate-fadeIn">
+                 Registration of helper for Obanshire Cub Scouts can be done online on our website. Submit a registration form and we will get in touch with you.
+				</p>
+			</details>
+		</div>
+
+
+        <div class="py-5">
+			<details class="group">
+				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+					<span className="text-nav font-paragraph font-semibold tracking-wide"> How can I obtain a Disclosure Scotland</span>
+					<span class="transition group-open:rotate-180">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+</svg>
+              </span>
+				</summary>
+				<p class="text-text font-medium font-paragraph tracking-wide mt-3 group-open:animate-fadeIn">
+                 To obtain a Disclosure Scotland, you need to apply online through 
+                 <Link to="https://www.mygov.scot/basic-disclosure/apply-for-basic-disclosure"> <span className="text-accent underline">the official website</span></Link> . The process typically takes 14 days to complete.
+				</p>
+			</details>
+		</div>
+
+
+	
+	</div>
+</div>
+
+
+
+
+
+           
+       
+
+
+
+    
+
+
+
 
 
 

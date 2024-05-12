@@ -91,20 +91,20 @@ import { useNavigate } from 'react-router-dom'; // If using React Router
         {/* Mobile Navigation Links */}
         <ul className="flex flex-col justify-center items-center h-full z-3">
           <li className="mb-1">
-                            <Link to="/" className=" font-paragraph block p-4 text-m font-semibold text-text hover:bg-green-50 hover:text-secondary rounded" onClick={toggleNav}>Home</Link>
+                            <Link to="/" className=" font-paragraph block p-4 text-m font-semibold text-nav hover:bg-green-50 hover:text-secondary rounded" onClick={toggleNav}>Home</Link>
                         </li>
 
                         <li className="mb-1">
-                            <Link to="#" className="font-paragraph block p-4 text-m font-semibold text-text hover:bg-green-50 hover:text-secondary rounded" onClick={toggleNav}>About Us</Link>
+                            <Link to="#" className="font-paragraph block p-4 text-m font-semibold text-nav hover:bg-green-50 hover:text-secondary rounded" onClick={toggleNav}>About Us</Link>
                         </li>
                         <li className="mb-1">
-                            <Link to="#" className="font-paragraph block p-4 text-m font-semibold text-text hover:bg-green-50 hover:text-secondary rounded"onClick={toggleNav} >Badges</Link>
+                            <Link to="#" className="font-paragraph block p-4 text-m font-semibold text-nav hover:bg-green-50 hover:text-secondary rounded"onClick={toggleNav} >Badges</Link>
                         </li>
                         <li className="mb-1">
-                            <Link to="#" className="font-paragraph block p-4 text-m font-semibold text-text hover:bg-green-50 hover:text-secondary rounded" onClick={toggleNav}>Gallery</Link>
+                            <Link to="#" className="font-paragraph block p-4 text-m font-semibold text-nav hover:bg-green-50 hover:text-secondary rounded" onClick={toggleNav}>Gallery</Link>
                         </li>
                         <li className="mb-1">
-                            <Link to="#" className="font-paragraph block p-4 text-m font-semibold text-text hover:bg-green-50 hover:text-secondary rounded" onClick={toggleNav} >Games</Link>
+                            <Link to="#" className="font-paragraph block p-4 text-m font-semibold text-nav hover:bg-green-50 hover:text-secondary rounded" onClick={toggleNav} >Games</Link>
                         </li>
         </ul>
 
@@ -137,7 +137,7 @@ import { useNavigate } from 'react-router-dom'; // If using React Router
                     <> 
                       {/* Additional Mobile Menu Items */}
         <div className="flex flex-col items-center mb-12">
-          <Link to='/register'className="font-paragraph text-text block px-4 py-3 mb-3 leading-loose text-s text-center font-semibold leading-none hover:text-secondary rounded-xl" onClick={toggleNav}>Become a helper</Link>
+          <Link to='/register'className="font-paragraph text-nav block px-4 py-3 mb-3 leading-loose text-s text-center font-semibold leading-none hover:text-secondary rounded-xl" onClick={toggleNav}>Become a helper</Link>
           
           <Link to='/login' className="font-paragraph block px-10 py-3 mb-2 leading-loose text-s text-center text-white font-semibold bg-accent hover:bg-red-400  rounded-xl" onClick={toggleNav} >Sign in</Link>
           </div>
@@ -155,35 +155,35 @@ import { useNavigate } from 'react-router-dom'; // If using React Router
               <ul className="hidden lg:flex space-x-6 items-center pl-14">
              
                
-              <li><Link to="/" className="font-paragraph text-l text-text hover:text-secondary" >Home</Link></li>
+              <li><Link to="/" className="font-paragraph text-l text-nav hover:text-secondary" >Home</Link></li>
             <li className="text-gray-300">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" className="w-4 h-4 current-fill" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
                 </svg>
             </li>
 
-            <li><Link to="#" className="font-paragraph text-l text-text hover:text-secondary" >About Us</Link></li>
+            <li><Link to="#" className="font-paragraph text-l text-nav hover:text-secondary" >About Us</Link></li>
             <li className="text-gray-300">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" className="w-4 h-4 current-fill" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
                 </svg>
             </li>
 
-            <li><Link to="/badges" className="font-paragraph text-l text-text hover:text-secondary" >Badges</Link></li>
+            <li><Link to="/badges" className="font-paragraph text-l text-nav hover:text-secondary" >Badges</Link></li>
             <li className="text-gray-300">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" className="w-4 h-4 current-fill" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
                 </svg>
             </li>
 
-            <li><Link to="#" className="font-paragraph text-l text-text hover:text-secondary" >Gallery</Link></li>
+            <li><Link to="#" className="font-paragraph text-l text-nav hover:text-secondary" >Gallery</Link></li>
             <li className="text-gray-300">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" className="w-4 h-4 current-fill" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
                 </svg>
             </li>
 
-            <li><Link to="#" className="font-paragraph text-l text-text hover:text-secondary " >Games</Link></li>
+            <li><Link to="#" className="font-paragraph text-l text-nav hover:text-secondary " >Games</Link></li>
 
             
         </ul>
@@ -209,14 +209,14 @@ import { useNavigate } from 'react-router-dom'; // If using React Router
                         <button  onClick={() => { 
                             handleLogout(); 
                             toggleNav(); 
-                        }} className="font-paragraph hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 hover:text-secondary text-l text-text font-bold  rounded-xl transition duration-200" >Sign out</button>
+                        }} className="font-paragraph hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 hover:text-secondary text-l text-nav font-bold  rounded-xl transition duration-200" >Sign out</button>
                 
                 </div>
                 
             ) : (
                 
         <div>
-            <Link to="/register" className="font-paragraph hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 hover:text-secondary text-l text-text font-bold  rounded-xl transition duration-200" >Become a helper</Link>
+            <Link to="/register" className="font-paragraph hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 hover:text-secondary text-l text-nav font-bold  rounded-xl transition duration-200" >Become a helper</Link>
             
             <Link to="/login" className="font-paragraph hidden lg:inline-block py-2 px-6 bg-accent hover:bg-red-400 text-l text-white font-bold rounded-xl transition duration-200" >Sign in</Link>
         </div>
