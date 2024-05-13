@@ -88,7 +88,7 @@ const About = () => {
 
 
       <main className="flex flex-col items-center justify-center mt-10">
-      <section className="pb-20 bg-background max-w-screen-xl mx-auto">
+      <section className="pb-20 bg-background max-w-screen-xl mx-auto px-5">
         <h2 className="text-4xl text-center my-10 font-heading text-secondary">Our History</h2>
 
         <p className='text-text font-medium tracking-wide font-paragraph text-l text-center'>
@@ -117,11 +117,11 @@ Dating back to ancient times, Obanshire boasts a storied past steeped in myth an
     style={{ backgroundImage: `url('/6.jpg')` }}>
    
 
-        <h2 className="text-white text-4xl font-heading font-semibold mt-20 mb-10">
+        <h2 className="text-primary text-4xl font-heading font-semibold mt-20 mb-10">
            OUR VALUES
         </h2>
 
-        <span className="text-center font-bold my-20 text-white">
+        <span className="text-center font-bold my-20 text-primary">
             <p
                 className="text-white font-paragraph text-xl tracking-wide ">
                 Outdoor Adventure
@@ -147,7 +147,7 @@ Dating back to ancient times, Obanshire boasts a storied past steeped in myth an
 </main>
 
 
-    <section class="bg-background p-40 ">   
+    <section class="bg-background pt-40 pb-20 ">   
     <h2 className="text-4xl text-center mb-10 font-heading text-primary">Contact Us</h2> 
         <div class="container flex flex-col mx-auto max-w-screen-xl bg-primary rounded-xl">
             <div class="w-full draggable p-5">
