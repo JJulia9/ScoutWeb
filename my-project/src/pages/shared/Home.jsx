@@ -36,7 +36,7 @@ const Home = () => {
 
 
             <div className="text-center mt-4 pt-3 lg:pb-8 m-2">
-                <Link to="/" className="font-paragraph py-4 px-8 bg-secondary hover:bg-shade text-lg sm:text-xl text-white font-bold rounded-xl transition duration-200">Let's meet</Link>
+                <Link to="/about" className="font-paragraph py-4 px-8 bg-secondary hover:bg-shade text-lg sm:text-xl text-white font-bold rounded-xl transition duration-200">Let's meet</Link>
             </div>
 
             <div className="flex items-center justify-center w-full absolute bottom-0">
@@ -252,7 +252,7 @@ const Home = () => {
 
 
                         <div className="text-center mt-10 pt-3  m-2">
-                        <Link to="/" className="font-paragraph py-4 px-8 bg-primary hover:bg-red-400 text-lg sm:text-xl text-white font-bold rounded-xl transition duration-200">Become a helper</Link>
+                        <Link to="/register" className="font-paragraph py-4 px-8 bg-primary hover:bg-red-400 text-lg sm:text-xl text-white font-bold rounded-xl transition duration-200">Become a helper</Link>
                          </div>
                 
                        
@@ -260,7 +260,7 @@ const Home = () => {
                 </div>
 
 
-<div class=" mx-auto px-5 bg-background min-h-sceen py-40 ">
+<div class=" mx-auto px-5 bg-background min-h-sceen pt-40 pb-20 ">
 	<div class="flex flex-col items-center ">
     <h4 className="text-2xl sm:text-3xl text-accent font-heading">
                             FAQ

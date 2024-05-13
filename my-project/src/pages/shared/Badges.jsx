@@ -16,6 +16,7 @@ const Badges = () => {
       badge.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
+  
 
     return (
         <>
@@ -54,7 +55,6 @@ const Badges = () => {
                   id={badge.id}
                   name={badge.name}
                   picture={badge.picture}
-
                 />
               ))}
             </div>
