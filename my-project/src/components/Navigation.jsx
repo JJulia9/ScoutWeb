@@ -95,7 +95,7 @@ import { useNavigate } from 'react-router-dom'; // If using React Router
                         </li>
 
                         <li className="mb-1">
-                            <Link to="#" className="font-paragraph block p-4 text-m font-semibold text-nav hover:bg-green-50 hover:text-secondary rounded" onClick={toggleNav}>About Us</Link>
+                            <Link to="/about" className="font-paragraph block p-4 text-m font-semibold text-nav hover:bg-green-50 hover:text-secondary rounded" onClick={toggleNav}>About Us</Link>
                         </li>
                         <li className="mb-1">
                             <Link to="#" className="font-paragraph block p-4 text-m font-semibold text-nav hover:bg-green-50 hover:text-secondary rounded"onClick={toggleNav} >Badges</Link>
@@ -162,7 +162,7 @@ import { useNavigate } from 'react-router-dom'; // If using React Router
                 </svg>
             </li>
 
-            <li><Link to="#" className="font-paragraph text-l text-nav hover:text-secondary" >About Us</Link></li>
+            <li><Link to="/about" className="font-paragraph text-l text-nav hover:text-secondary" >About Us</Link></li>
             <li className="text-gray-300">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" className="w-4 h-4 current-fill" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />

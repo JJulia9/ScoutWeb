@@ -8,6 +8,7 @@ import CubDashboard from './pages/cubs/CubDashboard';
 import LeaderDashboard from './pages/leaders/LeaderDashboard';
 import HelperDashboard from './pages/rHelpers/HelperDashboard';
 import Badges from './pages/shared/Badges';
+import About from './pages/shared/About.jsx';
 
 function App() {
   
@@ -18,8 +19,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/about" element={<About />} />
-          <Route path="/badges" element={<Badges />} />
+          <Route path="/about" element={<About />} />
+          {/* <Route path="/badges" element={<Badges />} />
           <Route path="/games" element={<Games />} />
           <Route path="/gallery" element={<Gallery />} /> */}
           <Route path="/register" element={<Register />} />
