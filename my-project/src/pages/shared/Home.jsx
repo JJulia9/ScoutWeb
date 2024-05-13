@@ -155,7 +155,7 @@ const Home = () => {
 
                 <div class="flex flex-wrap max-w-7xl">
                     <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
-                        <div class="flex flex-col">
+                        <div class="flex flex-col justify-center items-center">
                         <div className="h-96 w-72">
                                 <img class="h-full w-full object-cover rounded-xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
                                      src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=2561&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Profile picture"/>
@@ -175,7 +175,7 @@ const Home = () => {
 
 
                     <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
-                        <div class="flex flex-col">
+                        <div class="flex flex-col justify-center items-center">
                         <div className="h-96 w-72">
                                 <img class="h-full w-full object-cover rounded-xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
                                     src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Profile picture"/>
@@ -194,7 +194,7 @@ const Home = () => {
 
 
                     <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
-                        <div class="flex flex-col">
+                        <div class="flex flex-col justify-center items-center">
                         <div className="h-96 w-72">
                                 <img class="h-full w-full object-cover rounded-xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
                                     src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Profile picture"/>
@@ -214,7 +214,7 @@ const Home = () => {
 
 
                     <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
-                        <div class="flex flex-col">
+                        <div class="flex flex-col justify-center items-center">
                         <div className="h-96 w-72">
                                 <img class="h-full w-full object-cover rounded-xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
                                     src="https://images.unsplash.com/photo-1522556189639-b150ed9c4330?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Profile picture"/>

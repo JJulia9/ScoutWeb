@@ -30,24 +30,26 @@ const BadgeCard = ({id, name, picture }) => {
     return (
         <>
 
-        <div   // Add an ID to the badge card element to print modifivation
-          className="transition-all duration-1000 bg-tetriady hover:bg-secondary hover:shadow-xl m-2 p-4 relative z-40 group"
-        >
-          <div className="absolute bg-blue-500/50 top-0 left-0 w-24 h-1 z-30 transition-all duration-200 group-hover:bg-blue-900 group-hover:w-1/2"></div>
-          <div className="py-2 px-9 relative">
-            
-          <div className="text-center my-2">
-                            <img className="h-16 w-16 rounded-full"
-                                src={picture}
-                                alt="badge icon" />
-                  </div>
-            <div>
-              <h3 className="mt-8 text-lg font-semibold text-black group-hover:text-white">{name}</h3>
-              {/* <p className="mt-4 text-base text-gray-600 group-hover:text-white"> nothing for now</p> */}
-            </div>
-            <button onClick={printBadge}>Print Badge</button>
-          </div>
-        </div>
+<div className="transition-all duration-1000 bg-tetriady hover:bg-primary hover:shadow-xl m-2 p-4 relative  group rounded-xl">
+  <div className="py-2 px-9 relative flex flex-col items-center rounded-xl border-secondary border-solid border-2"> {/* Updated */}
+    <div className="text-center my-2 rounded-xl">
+      <img className="h-16 w-16 rounded-full" src={picture} alt="badge icon" />
+    </div>
+    <div className="text-center flex flex-row justify-center rounded-xl"> {/* Updated */}
+      <h3 className="mt-8 text-lg font-semibold text-black group-hover:text-white">{name}</h3>
+    
+    <button onClick={printBadge}>
+      <svg className="w-38 h-38" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="#ffffff" viewBox="0 0 38 38">
+        <path stroke="#1A4E38" strokeLinejoin="round" strokeWidth="2" d="M16.444 18H19a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h2.556M17 11V5a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v6h10ZM7 15h10v4a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-4Z"/>
+      </svg>
+    </button>
+    </div>
+  </div>
+</div>
+
+
+
+        
         
         </>
 

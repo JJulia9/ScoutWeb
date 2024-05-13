@@ -22,28 +22,26 @@ const Badges = () => {
         <>
         <Navigation />
 
-        <section className="bg-white">
-      <div className="py-10 sm:py-16 block lg:py-24 relative bg-opacity-50 z-40">
+        <section className="bg-background">
+      <div className="py-10 sm:py-16 block lg:py-24 relative bg-opacity-50 ">
         <div className="relative mx-auto h-full px-4 pb-20 md:pb-10 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8">
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 relative">
             <div className="max-w-xl mx-auto text-center">
               <div className="inline-flex px-4 py-1.5 mx-auto rounded-full">
-                <p className="text-4xl font-semibold tracking-widest text-g uppercase">
-                  Departments
-                </p>
-              </div>
-              <p className="mt-4 text-base leading-relaxed text-gray-600 group-hover:text-white">
-                click on the department view more details
-              </p>
 
+                 <h1 className="text-2xl sm:text-4xl tracking-wide text-primary font-heading pb-5">
+                           BADGES
+                        </h1>
+              </div>
+             
                  {/* Search input */}
                  <div className="mt-4">
                                     <input
                                         type="text"
                                         value={searchQuery}
                                         onChange={e => setSearchQuery(e.target.value)}
-                                        placeholder="Search departments..."
-                                        className="border-2 border-gray-300 rounded-lg p-2"
+                                        placeholder="search for cub badge..."
+                                        className="border-2 border-primary rounded-xl p-2"
                                     />
                                 </div>
             </div>
