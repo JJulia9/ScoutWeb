@@ -61,7 +61,7 @@ import { useNavigate } from 'react-router-dom'; // If using React Router
            
 
             {/* Mobile Menu */}
-            <div className="lg:hidden fixed right-0 px-10">
+            <div className="lg:hidden fixed right-0 px-10 z-20">
                 <button onClick={toggleNav} className="space-y-2">
                 {/* Hamburger Icon */}
                 <span className="block h-0.5 w-8 bg-secondary"></span>
@@ -74,7 +74,7 @@ import { useNavigate } from 'react-router-dom'; // If using React Router
                 {/* Close Icon */}
                 <div className="absolute top-0 right-0 p-4" onClick={toggleNav}>
                 <svg
-                    className="h-8 w-8 text-secondary"
+                    className="h-8 w-8 text-secondary z-30"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"

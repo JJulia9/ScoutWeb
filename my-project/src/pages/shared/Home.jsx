@@ -2,8 +2,7 @@ import React from "react";
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
 import { Link } from "react-router-dom";
-import Gallery from "../../components/Gallery";
-import UploadForm from "../../components/UploadForm";
+
 
 const Home = () => {
     
@@ -11,7 +10,6 @@ const Home = () => {
     return(
         <>
         
-
             
                     <div className="h-screen bg-[url('/pattern.svg')] ">
                     <Navigation />
