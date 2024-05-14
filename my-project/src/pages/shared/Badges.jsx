@@ -29,7 +29,7 @@ const Badges = () => {
             <div className="max-w-xl mx-auto text-center">
               <div className="inline-flex px-4 py-1.5 mx-auto rounded-full">
 
-                 <h1 className="text-2xl sm:text-4xl tracking-wide text-primary font-heading pb-5">
+                 <h1 className="text-4xl sm:text-5xl tracking-wide text-primary font-heading pb-5">
                            BADGES
                         </h1>
               </div>

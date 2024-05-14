@@ -22,7 +22,7 @@ const Home = () => {
                     Begins Here
                     </p>
                 
-                    <p className="sm:mt-8 mt-2.5 sm:px-20 sm:text-xl sm:leading-loose text-l font-semibold p-2">
+                    <p className="sm:mt-8 mt-2.5 sm:px-20 sm:text-xl sm:leading-loose text-l font-semibold p-2 font-paragraph">
                     Empowering the Next <span className="font-bold text-secondary">Generation of Scouts!</span>
                     </p>
                 </div>
@@ -74,61 +74,61 @@ const Home = () => {
 
 
 
-            <div class="bg-background h-full pb-6 sm:pb-8 lg:pb-12">
-            <div class="mx-auto  max-w-screen-xl  px-4 md:px-8">
+            <div className="bg-background h-full pb-6 sm:pb-8 lg:pb-12">
+            <div className="mx-auto  max-w-screen-xl  px-4 md:px-8">
               
             
 
-                <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8 pt-5">
+                <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8 pt-5">
                     
                     <Link to="/"
-                        class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
-                        <img src="/3.jpg" loading="lazy" alt="Photo by from image bank" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+                        className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
+                        <img src="/3.jpg" loading="lazy" alt="Photo by from image bank" className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
 
                         <div
-                            class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
                         </div>
 
-                        <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg font-heading">Games</span>
+                        <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg font-heading">Games</span>
                     </Link>
                 
 
                     
                     <Link to="/"
-                        class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
-                        <img src="/4.jpg" loading="lazy" alt="Photo from image bank" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+                        className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
+                        <img src="/4.jpg" loading="lazy" alt="Photo from image bank" className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
 
                         <div
-                            class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
                         </div>
 
-                        <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg font-heading">Info for helpers</span>
+                        <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg font-heading">Info for helpers</span>
                     </Link>
                 
 
                     
                     <Link to="/"
-                        class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
-                        <img src="/5.jpg" loading="lazy" alt="Photo from image bank" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+                        className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
+                        <img src="/5.jpg" loading="lazy" alt="Photo from image bank" className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
 
                         <div
-                            class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
                         </div>
 
-                        <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg font-heading">Training</span>
+                        <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg font-heading">Training</span>
                     </Link>
                 
 
                     
                     <Link to="/"
-                        class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
-                        <img src="/9.jpg" loading="lazy" alt="Photo from image bank" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+                        className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
+                        <img src="/9.jpg" loading="lazy" alt="Photo from image bank" className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
 
                         <div
-                            class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
                         </div>
 
-                        <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg font-heading">Gallery</span>
+                        <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg font-heading">Gallery</span>
                     </Link>
                 
                 </div>
@@ -137,12 +137,12 @@ const Home = () => {
 
 
         
-<div class="flex items-center justify-center  bg-background  pt-28 pb-10">
-    <div class="flex flex-col">
-        <div class="flex flex-col ">
-            <div class="container max-w-7xl px-4">
-                <div class="flex flex-wrap justify-center text-center mb-5">
-                    <div class="w-full px-4">
+<div className="flex items-center justify-center  bg-background  pt-28 pb-10">
+    <div className="flex flex-col">
+        <div className="flex flex-col ">
+            <div className="container max-w-7xl px-4">
+                <div className="flex flex-wrap justify-center text-center mb-5">
+                    <div className="w-full px-4">
                         <h4 className="text-2xl sm:text-3xl text-secondary font-heading pb-10">
                             Our Team
                         </h4>
@@ -151,20 +151,20 @@ const Home = () => {
                 </div>
 
 
-                <div class="flex flex-wrap max-w-7xl">
-                    <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
-                        <div class="flex flex-col justify-center items-center">
+                <div className="flex flex-wrap max-w-7xl">
+                    <div className="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                        <div className="flex flex-col justify-center items-center">
                         <div className="h-96 w-72">
-                                <img class="h-full w-full object-cover rounded-xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                                <img className="h-full w-full object-cover rounded-xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
                                      src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=2561&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Profile picture"/>
                             </div>
 
-                            <div class="text-center mt-6">
-                                <h1 class="text-secondary font-heading text-xl font-bold mb-1">
+                            <div className="text-center mt-6">
+                                <h1 className="text-secondary font-heading text-xl font-bold mb-1">
                                 Sarah Thompson
                                 </h1>
 
-                                <div class="text-text font-paragraph font-light mb-2">
+                                <div className="text-text font-paragraph font-light mb-2">
                                     Founder & Director
                                 </div>
                             </div>
@@ -172,18 +172,18 @@ const Home = () => {
                     </div> 
 
 
-                    <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
-                        <div class="flex flex-col justify-center items-center">
+                    <div className="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                        <div className="flex flex-col justify-center items-center">
                         <div className="h-96 w-72">
-                                <img class="h-full w-full object-cover rounded-xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                                <img className="h-full w-full object-cover rounded-xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
                                     src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Profile picture"/>
                             </div>
-                            <div class="text-center mt-6">
-                                <h1 class="text-secondary font-heading text-xl font-bold mb-1">
+                            <div className="text-center mt-6">
+                                <h1 className="text-secondary font-heading text-xl font-bold mb-1">
                                 Michael Patel 
                                 </h1>
 
-                                <div class="text-text font-paragraph font-light mb-2">
+                                <div className="text-text font-paragraph font-light mb-2">
                                 Volunteer Coordinator
                                 </div>
                             </div>
@@ -191,19 +191,19 @@ const Home = () => {
                     </div> 
 
 
-                    <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
-                        <div class="flex flex-col justify-center items-center">
+                    <div className="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                        <div className="flex flex-col justify-center items-center">
                         <div className="h-96 w-72">
-                                <img class="h-full w-full object-cover rounded-xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                                <img className="h-full w-full object-cover rounded-xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
                                     src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Profile picture"/>
                             </div>
 
-                            <div class="text-center mt-6">
-                                <h1 class="text-secondary font-heading text-xl font-bold mb-1">
+                            <div className="text-center mt-6">
+                                <h1 className="text-secondary font-heading text-xl font-bold mb-1">
                                 Emily Rodriguez 
                                 </h1>
 
-                                <div class="text-text font-paragraph font-light mb-2">
+                                <div className="text-text font-paragraph font-light mb-2">
                                 Outdoor Education Specialist
                                 </div>
                             </div>
@@ -211,19 +211,19 @@ const Home = () => {
                     </div> 
 
 
-                    <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
-                        <div class="flex flex-col justify-center items-center">
+                    <div className="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                        <div className="flex flex-col justify-center items-center">
                         <div className="h-96 w-72">
-                                <img class="h-full w-full object-cover rounded-xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                                <img className="h-full w-full object-cover rounded-xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
                                     src="https://images.unsplash.com/photo-1522556189639-b150ed9c4330?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Profile picture"/>
                             </div>
 
-                            <div class="text-center mt-6">
-                                <h1 class="text-secondary font-heading text-xl font-bold mb-1">
+                            <div className="text-center mt-6">
+                                <h1 className="text-secondary font-heading text-xl font-bold mb-1">
                                 David Lee 
                                 </h1>
 
-                                <div class="text-text font-paragraph font-light mb-2">
+                                <div className="text-text font-paragraph font-light mb-2">
                                    Head Leader
                                 </div>
                             </div>
@@ -237,8 +237,8 @@ const Home = () => {
         </div>
     </div>
 
-    <div class="flex flex-wrap justify-center text-center  p-10 bg-shade">
-                    <div class="w-full px-4">
+    <div className="flex flex-wrap justify-center text-center  p-10 bg-shade">
+                    <div className="w-full px-4">
                         <h4 className="text-2xl sm:text-3xl text-primary font-heading">
                             Join Us
                         </h4>
@@ -258,104 +258,104 @@ const Home = () => {
                 </div>
 
 
-<div class=" mx-auto px-5 bg-background min-h-sceen pt-40 pb-20 ">
-	<div class="flex flex-col items-center ">
+<div className=" mx-auto px-5 bg-background min-h-sceen pt-40 pb-20 ">
+	<div className="flex flex-col items-center ">
     <h4 className="text-2xl sm:text-3xl text-accent font-heading">
                             FAQ
                         </h4>
-		<p class="text-text font-paragraph text-xl mt-3 tracking-wide ">
+		<p className="text-text font-paragraph text-xl mt-3 tracking-wide ">
 			frequenty asked questions
 		</p>
 	</div>
-	<div class="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8">
+	<div className="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8">
 		
         
-        <div class="py-5">
-			<details class="group">
-				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+        <div className="py-5">
+			<details className="group">
+				<summary className="flex justify-between items-center font-medium cursor-pointer list-none">
 					<span className="text-nav font-paragraph font-semibold tracking-wide"> Who can join Obanshire Cub Scouts?</span>
-					<span class="transition group-open:rotate-180">
-                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+					<span className="transition group-open:rotate-180">
+                <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
 </svg>
               </span>
 				</summary>
-				<p class="text-text font-medium font-paragraph tracking-wide mt-3 group-open:animate-fadeIn">
+				<p className="text-text font-medium font-paragraph tracking-wide mt-3 group-open:animate-fadeIn">
                 Obanshire Cub Scouts welcomes children and youth aged 8 to 10, providing an enriching experience for growth and development, and helpers all ages.
 				</p>
 			</details>
 		</div>
 
-        <div class="py-5">
-			<details class="group">
-				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+        <div className="py-5">
+			<details className="group">
+				<summary className="flex justify-between items-center font-medium cursor-pointer list-none">
 					<span className="text-nav font-paragraph font-semibold tracking-wide"> What are the benefits of joining Obanshire Cub Scouts?</span>
-					<span class="transition group-open:rotate-180">
-                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+					<span className="transition group-open:rotate-180">
+                <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
 </svg>
               </span>
 				</summary>
-				<p class="text-text font-medium font-paragraph tracking-wide mt-3 group-open:animate-fadeIn">
+				<p className="text-text font-medium font-paragraph tracking-wide mt-3 group-open:animate-fadeIn">
                 Obanshire Cub Scouts offers a platform for fostering leadership skills, outdoor adventures, community service opportunities, and lifelong friendships.
 				</p>
 			</details>
 		</div>
 
-        <div class="py-5">
-			<details class="group">
-				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+        <div className="py-5">
+			<details className="group">
+				<summary className="flex justify-between items-center font-medium cursor-pointer list-none">
 					<span className="text-nav font-paragraph font-semibold tracking-wide"> Are there any specific requirements for joining?</span>
-					<span class="transition group-open:rotate-180">
-                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+					<span className="transition group-open:rotate-180">
+                <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
 </svg>
               </span>
 				</summary>
-				<p class="text-text font-medium font-paragraph tracking-wide mt-3 group-open:animate-fadeIn">
+				<p className="text-text font-medium font-paragraph tracking-wide mt-3 group-open:animate-fadeIn">
                 To join  Obanshire Cub Scouts, future cubs must meet the age requirements and adhere to the principles of inclusivity, respect, and cooperation. Future helpers must be willing to undergo a background check and have a Disclosure Scotland.
 				</p>
 			</details>
 		</div>
     
-        <div class="py-5">
-			<details class="group">
-				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+        <div className="py-5">
+			<details className="group">
+				<summary className="flex justify-between items-center font-medium cursor-pointer list-none">
 					<span className="text-nav font-paragraph font-semibold tracking-wide"> How can I register my child for Obanshire Cub Scouts?</span>
-					<span class="transition group-open:rotate-180">
-                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+					<span className="transition group-open:rotate-180">
+                <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
 </svg>
               </span>
 				</summary>
-				<p class="text-text font-medium font-paragraph tracking-wide mt-3 group-open:animate-fadeIn">
+				<p className="text-text font-medium font-paragraph tracking-wide mt-3 group-open:animate-fadeIn">
                  Registration for Obanshire Cub Scouts can be done only  contacting us via email.
 				</p>
 			</details>
 		</div>
 
-        <div class="py-5">
-			<details class="group">
-				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+        <div className="py-5">
+			<details className="group">
+				<summary className="flex justify-between items-center font-medium cursor-pointer list-none">
 					<span className="text-nav font-paragraph font-semibold tracking-wide"> How can I register as a helper for Obanshire Cub Scouts?</span>
-					<span class="transition group-open:rotate-180">
-                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+					<span className="transition group-open:rotate-180">
+                <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
 </svg>
               </span>
 				</summary>
-				<p class="text-text font-medium font-paragraph tracking-wide mt-3 group-open:animate-fadeIn">
+				<p className="text-text font-medium font-paragraph tracking-wide mt-3 group-open:animate-fadeIn">
                  Registration of helper for Obanshire Cub Scouts can be done online on our website. Submit a registration form and we will get in touch with you.
 				</p>
 			</details>
 		</div>
 
 
-        <div class="py-5">
-			<details class="group">
-				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+        <div className="py-5">
+			<details className="group">
+				<summary className="flex justify-between items-center font-medium cursor-pointer list-none">
 					<span className="text-nav font-paragraph font-semibold tracking-wide"> How can I obtain a Disclosure Scotland?</span>
-					<span class="transition group-open:rotate-180">
-                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+					<span className="transition group-open:rotate-180">
+                <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
 </svg>
               </span>
 				</summary>
-				<p class="text-text font-medium font-paragraph tracking-wide mt-3 group-open:animate-fadeIn">
+				<p className="text-text font-medium font-paragraph tracking-wide mt-3 group-open:animate-fadeIn">
                  To obtain a Disclosure Scotland, you need to apply online through 
                  <Link to="https://www.mygov.scot/basic-disclosure/apply-for-basic-disclosure"> <span className="text-accent underline">the official website</span></Link> . The process typically takes 14 days to complete.
 				</p>
@@ -363,16 +363,16 @@ const Home = () => {
 		</div>
 
 
-        <div class="py-5">
-			<details class="group">
-				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+        <div className="py-5">
+			<details className="group">
+				<summary className="flex justify-between items-center font-medium cursor-pointer list-none">
 					<span className="text-nav font-paragraph font-semibold tracking-wide"> How to register for a training? </span>
-					<span class="transition group-open:rotate-180">
-                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+					<span className="transition group-open:rotate-180">
+                <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
 </svg>
               </span>
 				</summary>
-				<p class="text-text font-medium font-paragraph tracking-wide mt-3 group-open:animate-fadeIn">
+				<p className="text-text font-medium font-paragraph tracking-wide mt-3 group-open:animate-fadeIn">
                  To register for training you need to be registered as a helper. Once you are registered, you can sign up for training sessions on our website. To register please click
                  <Link to="/register"> <span className="text-accent underline">here</span></Link>.
 				</p>

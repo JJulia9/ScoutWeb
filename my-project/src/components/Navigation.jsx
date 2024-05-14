@@ -98,13 +98,13 @@ import { useNavigate } from 'react-router-dom'; // If using React Router
                             <Link to="/about" className="font-paragraph block p-4 text-m font-semibold text-nav hover:bg-green-50 hover:text-secondary rounded" onClick={toggleNav}>About Us</Link>
                         </li>
                         <li className="mb-1">
-                            <Link to="#" className="font-paragraph block p-4 text-m font-semibold text-nav hover:bg-green-50 hover:text-secondary rounded"onClick={toggleNav} >Badges</Link>
+                            <Link to="/badges" className="font-paragraph block p-4 text-m font-semibold text-nav hover:bg-green-50 hover:text-secondary rounded"onClick={toggleNav} >Badges</Link>
                         </li>
                         <li className="mb-1">
-                            <Link to="#" className="font-paragraph block p-4 text-m font-semibold text-nav hover:bg-green-50 hover:text-secondary rounded" onClick={toggleNav}>Gallery</Link>
+                            <Link to="/gallery" className="font-paragraph block p-4 text-m font-semibold text-nav hover:bg-green-50 hover:text-secondary rounded" onClick={toggleNav}>Gallery</Link>
                         </li>
                         <li className="mb-1">
-                            <Link to="#" className="font-paragraph block p-4 text-m font-semibold text-nav hover:bg-green-50 hover:text-secondary rounded" onClick={toggleNav} >Games</Link>
+                            <Link to="/games" className="font-paragraph block p-4 text-m font-semibold text-nav hover:bg-green-50 hover:text-secondary rounded" onClick={toggleNav} >Games</Link>
                         </li>
         </ul>
 
@@ -176,14 +176,14 @@ import { useNavigate } from 'react-router-dom'; // If using React Router
                 </svg>
             </li>
 
-            <li><Link to="#" className="font-paragraph text-l text-nav hover:text-secondary" >Gallery</Link></li>
+            <li><Link to="/gallery" className="font-paragraph text-l text-nav hover:text-secondary" >Gallery</Link></li>
             <li className="text-gray-300">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" className="w-4 h-4 current-fill" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
                 </svg>
             </li>
 
-            <li><Link to="#" className="font-paragraph text-l text-nav hover:text-secondary " >Games</Link></li>
+            <li><Link to="/games" className="font-paragraph text-l text-nav hover:text-secondary " >Games</Link></li>
 
             
         </ul>

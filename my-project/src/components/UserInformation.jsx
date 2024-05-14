@@ -10,7 +10,7 @@ const UserInformation = () => {
       try {
         const token = localStorage.getItem('token');
         if (!token) {
-          console.error('No token found');
+          // console.error('No token found');
           return;
         }
         const response = await axios.get('http://localhost:5000/api/users', {

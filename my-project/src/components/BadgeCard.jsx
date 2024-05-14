@@ -36,7 +36,7 @@ const BadgeCard = ({id, name, picture }) => {
       <img className="h-16 w-16 rounded-full" src={picture} alt="badge icon" />
     </div>
     <div className="text-center flex flex-row justify-center rounded-xl"> {/* Updated */}
-      <h3 className="mt-8 text-lg font-semibold text-black group-hover:text-white">{name}</h3>
+      <h3 className="mt-8 text-lg font-semibold text-secondary group-hover:text-white">{name}</h3>
     
     <button onClick={printBadge}>
       <svg className="w-38 h-38" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="#ffffff" viewBox="0 0 38 38">

@@ -9,6 +9,8 @@ import LeaderDashboard from './pages/leaders/LeaderDashboard';
 import HelperDashboard from './pages/rHelpers/HelperDashboard';
 import Badges from './pages/shared/Badges';
 import About from './pages/shared/About.jsx';
+import GalleryPage from './pages/shared/Gallery.jsx';
+import Games from './pages/shared/Games.jsx';
 
 function App() {
   
@@ -20,9 +22,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          {/* <Route path="/badges" element={<Badges />} />
+          <Route path="/badges" element={<Badges />} />
           <Route path="/games" element={<Games />} />
-          <Route path="/gallery" element={<Gallery />} /> */}
+          <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/cubdashboard" element={<CubDashboard />} />
