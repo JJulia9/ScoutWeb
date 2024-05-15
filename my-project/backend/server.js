@@ -194,6 +194,25 @@ app.get('/api/users/role/helper', async (req, res) => {
 });
 
 
+
+//fetch cubs
+app.get('/api/users/role/cub', async (req, res) => {
+  const { role } = req.params;
+
+  try {
+    const users = await User.find({ role: 'Cub'}); // Fetch users with the given role
+    res.json(users); // Return the list of users
+  } catch (error) {
+    console.error('Error fetching users:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+
+
+
+
+
 // Serve the uploads folder as static files
 app.use("/uploads", express.static("uploads"));
         

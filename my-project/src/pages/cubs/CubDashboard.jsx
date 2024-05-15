@@ -13,7 +13,7 @@ const CubDashboard = () => {
         <>
         <Navigation />
         <div className='bg-background'>
-        <div className="w-full py-10  bg-secondary my-10  flex-row">
+        <div className="w-full py-10 mb-10 bg-secondary  flex-row">
         <div className="flex max-w-screen-xl mx-auto">
         <h1 className="font-heading  text-white text-4xl p-2 mb-2">Welcome back Cub </h1>
         <svg className="w-38 h-38 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="none" viewBox="0 0 38 38">
@@ -21,6 +21,7 @@ const CubDashboard = () => {
         </svg>
         </div>
     </div>
+    
 
          <ProfileCard />
 

@@ -1,19 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Calendar, Views } from 'react-big-calendar';
+import { Calendar, Views, momentLocalizer } from 'react-big-calendar';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
-import { parseISO, startOfWeek, getDay } from 'date-fns';
-import { dateFnsLocalizer } from 'react-big-calendar';
+import moment from 'moment';
 import axios from 'axios';
-
-import enGB from 'date-fns/locale/en-GB';
-
-const localizer = dateFnsLocalizer({
-  format: (date, formatString, locale) => date.toLocaleString(locale),
-  parse: (dateStr) => parseISO(dateStr),
-  startOfWeek: () => startOfWeek(new Date(), { locale: enGB }),
-  getDay: (date) => getDay(date),
-  locales: { 'en-GB': enGB },
-});
 
 const AllUsersCalendar = () => {
   const [events, setEvents] = useState([]);
@@ -25,11 +14,10 @@ const AllUsersCalendar = () => {
         if (Array.isArray(response.data)) {
           const formattedEvents = response.data.map((item) => {
             if (!item.date) return null; // Ensure there's a date to process
-            const parsedDate = parseISO(item.date);
             return {
-              start: parsedDate,
-              end: parsedDate,
-              title: `${item.firstName} ${item.lastName}`, // No comments, just user info
+              start: moment(item.date).startOf('day').toDate(), // Start of the day
+              end: moment(item.date).endOf('day').toDate(), // End of the day
+              title: `${item.firstName} ${item.lastName}`, // Helper's name
             };
           }).filter(Boolean); // Remove any null values
 
@@ -41,19 +29,39 @@ const AllUsersCalendar = () => {
       .catch((error) => console.error('Error fetching available days:', error));
   }, []); // Ensure this runs once when the component is mounted
 
+
+
+  const eventStyleGetter = (event, start, end, isSelected) => {
+    const backgroundColor = '#F1B22D'; // Change color as needed
+    const style = {
+      backgroundColor,
+      borderRadius: '5px',
+      opacity: 0.8,
+      color: 'white',
+      display: 'block',
+    };
+    return {
+      style: style,
+    };
+  };
+
   return (
-    <div>
-      <h2>All Users Availability Calendar</h2>
+    <div className="max-w-screen-xl mx-2 my-10 ">
+      <h3 className="text-primary font-heading text-xl sm:text-2xl font-medium max-w-screen-xl mx-auto pb-3"> Helpers Availability </h3>
+      <p className="text-text font-paragraph pb-5">please rotate for mobile view</p> 
+
       {events.length > 0 ? (
         <Calendar
-          localizer={localizer}
+          localizer={momentLocalizer(moment)}
           events={events}
           startAccessor="start"
           endAccessor="end"
           views={['month', 'week', 'day']} // Default calendar views
           defaultView={Views.MONTH}
           style={{ height: 500 }}
-        />
+          eventPropGetter={eventStyleGetter} // Apply custom styles to events
+          />
+       
       ) : (
         <p>No available days to display.</p>
       )}

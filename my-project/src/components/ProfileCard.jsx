@@ -18,7 +18,7 @@ const ProfileCard = () => {
 
         {user && (
 
-        <div className='m-10'>
+        <div className='mx-2 mb-20'>
         <h3 className="text-primary font-heading text-xl sm:text-2xl font-medium max-w-screen-xl mx-auto pb-5 p-2"> Profile </h3>
         <div className="h-64 max-w-screen-xl mx-auto">
         <div className="bg-white p-3 shadow-m border-secondary border-2 border-solid rounded-xl">

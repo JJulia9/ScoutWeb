@@ -2,9 +2,9 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const HelperTable = () => {
+const CubsTable = () => {
 const [users, setUsers] = useState([]); // State to hold the fetched users
-  const role = 'Helper'; // Define the role you're interested in
+  const role = 'Cub'; // Define the role you're interested in
   
   useEffect(() => {
     const fetchUsers = async () => {
@@ -32,21 +32,27 @@ const [users, setUsers] = useState([]); // State to hold the fetched users
     
   return (
     <>
-    <h3 className="text-primary font-heading text-xl sm:text-2xl font-medium max-w-screen-xl mx-auto pb-5 p-2"> Helpers Information </h3>
+    <h3 className="text-secondary font-heading text-xl sm:text-2xl font-medium max-w-screen-xl mx-auto pb-5 p-2"> Cubs Information </h3>
 
-      <div className="relative overflow-x-auto  border-2 border-primary rounded-xl mx-2">
+      <div className="relative overflow-x-auto  border-2 border-secondary rounded-xl mx-2">
         
         <table className="w-full text-sm text-left rtl:text-right text-text font-paragraph">
-          <thead className="text-s text-primary uppercase bg-background">
+          <thead className="text-s text-secondary uppercase bg-background">
             <tr>
               <th scope="col" className="px-6 py-3">Name</th>
-              <th scope="col" className="px-6 py-3">Email</th>
-              <th scope="col" className="px-6 py-3">Phone</th>
               <th scope="col" className="px-6 py-3">Date of Birth</th>
-              <th scope="col" className="px-6 py-3">Disclosure Scotland</th>
-              <th scope="col" className="px-6 py-3">Training</th>
+              <th scope="col" className="px-6 py-3">Address</th>
+              <th scope="col" className="px-6 py-3">Email</th>
+              <th scope="col" className="px-6 py-3">Parent Name</th>
+                <th scope="col" className="px-6 py-3">Parent Email</th>
+                <th scope="col" className="px-6 py-3">Parent Phone</th>
+                <th scope="col" className="px-6 py-3">Phone</th> 
+              <th scope="col" className="px-6 py-3">Allergies</th>
+            
             </tr>
           </thead>
+
+        
     
     <tbody className='text-nav font-paragraph'>
             {users.map((user) => (
@@ -54,12 +60,14 @@ const [users, setUsers] = useState([]); // State to hold the fetched users
                   <th scope="row" className=" px-6 py-4 font-medium whitespace-nowrap">
                     {user.firstName} {user.lastName}
                   </th>
-                  <td className="px-6 py-4">{user.email}</td>
-                  <td className="px-6 py-4">{user.phone}</td>
                   <td className="px-6 py-4">{new Date(user.dob).toLocaleDateString()}</td>
-                  <td className="px-6 py-4">{user.disclosureScot ? 'Yes' : 'No'}</td>
-                  <td className="px-6 py-4">{user.training.join(', ')}</td>
-                 
+                  <td className="px-6 py-4">{user.address}</td>
+                  <td className="px-6 py-4">{user.email}</td>
+                  <td className="px-6 py-4">{user.parentName}</td>
+                    <td className="px-6 py-4">{user.parentEmail}</td>
+                    <td className="px-6 py-4">{user.parentPhone}</td>
+                  <td className="px-6 py-4">{user.phone}</td>
+                  <td className="px-6 py-4">{user.allergies}</td>
                 </tr>
             )
             )}
@@ -70,4 +78,4 @@ const [users, setUsers] = useState([]); // State to hold the fetched users
   );
 };
 
-export default HelperTable;
+export default CubsTable;
