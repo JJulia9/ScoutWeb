@@ -48,9 +48,7 @@ app.get('/api/users', async (req, res) => {
         return res.status(401).json({ error: 'Unauthorized: Invalid token' });
       }
       const user = await User.findById(decoded.userId)
-        // .populate('kids')
-        // .populate('department_id')
-        // .populate('doctor_id');
+        
 
 
       // The decoded.userId should match the structure used in jwt.sign during login
