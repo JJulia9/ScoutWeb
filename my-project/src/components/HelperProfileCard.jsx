@@ -54,34 +54,29 @@ const ProfileCard = () => {
                     </div>
 
                     <div className="grid grid-cols-2">
-                        <div className="px-4 py-2 font-semibold"> Cub Email</div>
+                        <div className="px-4 py-2 font-semibold">Email</div>
                         <div className="px-4 py-2">
                             <a className="text-secondary" href="mailto:jane@example.com">{user.email}</a>
                         </div>
                     </div>
 
-
                     <div className="grid grid-cols-2">
-                        <div className="px-4 py-2 font-semibold">Parent Name</div>
-                        <div className="px-4 py-2">{user.parentName}</div>
+                        <div className="px-4 py-2 font-semibold"> Phone</div>
+                        <div className="px-4 py-2">{user.phone}</div>
                     </div>
 
                     <div className="grid grid-cols-2">
-                        <div className="px-4 py-2 font-semibold">Parent Email</div>
+                        <div className="px-4 py-2 font-semibold">Disclosure Scotland</div>
+                        <div className="px-4 py-2">{user.disclosureScot ? 'Yes' : 'No'}</div>
+                    </div>
+
+                    <div className="grid grid-cols-2">
+                        <div className="px-4 py-2 font-semibold">Training</div>
                         <div className="px-4 py-2">
-                            <a className="text-secondary" href="mailto:jane@example.com">{user.parentEmail}</a>
+                            <a className="text-secondary" href="mailto:jane@example.com">{user.training.join(", ") }</a>
                         </div>
                     </div>
-                    <div className="grid grid-cols-2">
-                        <div className="px-4 py-2 font-semibold">Parent Phone</div>
-                        <div className="px-4 py-2">{user.parentPhone}</div>
-                    </div>
-
-                    
-                    <div className="grid grid-cols-2">
-                        <div className="px-4 py-2 font-semibold">Allergies</div>
-                        <div className="px-4 py-2">{user.allergies}</div>
-                    </div>
+                  
 
                     
                    

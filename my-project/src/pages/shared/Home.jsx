@@ -33,13 +33,13 @@ const Home = () => {
             </div>
 
 
-            <div className="text-center mt-4 pt-3 lg:pb-8 m-2">
-                <Link to="/about" className="font-paragraph py-4 px-8 bg-secondary hover:bg-shade text-lg sm:text-xl text-white font-bold rounded-xl transition duration-200">Let's meet</Link>
+            <div className="text-center mt-4 pt-3 lg:pb-8 m-2 z-10">
+                <Link to="/about" className="font-paragraph py-4 px-8 bg-secondary hover:bg-shade text-lg sm:text-xl text-white font-bold rounded-xl transition duration-200 z-10">Let's meet</Link>
             </div>
 
-            <div className="flex items-center justify-center w-full absolute bottom-0">
+            <div className="flex items-center justify-center w-full absolute bottom-0 z-0">
                 <img
-                className='w-1/2 sm:w-1/4'
+                className='w-1/2 sm:w-1/4 z-0' 
                 src='/scouts.svg'
                 />
             </div>
@@ -81,7 +81,7 @@ const Home = () => {
 
                 <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8 pt-5">
                     
-                    <Link to="/"
+                    <Link to="/games"
                         className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
                         <img src="/3.jpg" loading="lazy" alt="Photo by from image bank" className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
 
@@ -94,7 +94,7 @@ const Home = () => {
                 
 
                     
-                    <Link to="/"
+                    <Link to="/login"
                         className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
                         <img src="/4.jpg" loading="lazy" alt="Photo from image bank" className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
 
@@ -107,7 +107,7 @@ const Home = () => {
                 
 
                     
-                    <Link to="/"
+                    <Link to="/login"
                         className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
                         <img src="/5.jpg" loading="lazy" alt="Photo from image bank" className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
 
@@ -120,7 +120,7 @@ const Home = () => {
                 
 
                     
-                    <Link to="/"
+                    <Link to="/gallery"
                         className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
                         <img src="/9.jpg" loading="lazy" alt="Photo from image bank" className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
 
@@ -258,7 +258,7 @@ const Home = () => {
                 </div>
 
 
-<div className=" mx-auto px-5 bg-background min-h-sceen pt-40 pb-20 ">
+<div  id="section1" className=" mx-auto px-5 bg-background min-h-sceen pt-40 pb-20 ">
 	<div className="flex flex-col items-center ">
     <h4 className="text-2xl sm:text-3xl text-accent font-heading">
                             FAQ
@@ -330,7 +330,7 @@ const Home = () => {
 			</details>
 		</div>
 
-        <div className="py-5">
+        <div  className="py-5">
 			<details className="group">
 				<summary className="flex justify-between items-center font-medium cursor-pointer list-none">
 					<span className="text-nav font-paragraph font-semibold tracking-wide"> How can I register as a helper for Obanshire Cub Scouts?</span>

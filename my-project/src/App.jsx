@@ -11,6 +11,7 @@ import Badges from './pages/shared/Badges';
 import About from './pages/shared/About.jsx';
 import GalleryPage from './pages/shared/Gallery.jsx';
 import Games from './pages/shared/Games.jsx';
+import Training from './components/Training.jsx';
 
 function App() {
   
@@ -32,6 +33,7 @@ function App() {
           <Route path="/helperdashboard" element={<HelperDashboard />} />
 
           <Route path="/badges" element={<Badges />} />
+          <Route path="/training" element={<Training />} />
 
         </Routes>
       </Router>

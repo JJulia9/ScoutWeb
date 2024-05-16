@@ -82,11 +82,11 @@ const Footer = () => {
       
                 <ul className="mt-6 space-y-4 text-sm">
                   <li>
-                    <Link to="#" className=" font-paragraph text-text transition hover:opacity-75"> Sign in </Link>
+                    <Link to="/login" className=" font-paragraph text-text transition hover:opacity-75"> Sign in </Link>
                   </li>
       
                   <li>
-                    <Link to="#" className="font-paragraph text-text transition hover:opacity-75"> Register as a helper </Link>
+                    <Link to="/register" className="font-paragraph text-text transition hover:opacity-75"> Register as a helper </Link>
                   </li>
     
                 </ul>
@@ -97,19 +97,19 @@ const Footer = () => {
       
                 <ul className="mt-6 space-y-4 text-sm">
                   <li>
-                    <Link to="#" className="font-paragraph text-text transition hover:opacity-75"> About </Link>
+                    <Link to="/about" className="font-paragraph text-text transition hover:opacity-75"> About </Link>
                   </li>
       
                   <li>
-                    <Link to="#" className="font-paragraph text-text transition hover:opacity-75"> Badges</Link>
+                    <Link to="/badges" className="font-paragraph text-text transition hover:opacity-75"> Badges</Link>
                   </li>
       
                   <li>
-                    <Link to="#" className="font-paragraph text-text transition hover:opacity-75"> Gallery </Link>
+                    <Link to="/gallery" className="font-paragraph text-text transition hover:opacity-75"> Gallery </Link>
                   </li>
       
                   <li>
-                    <Link to="#" className="font-paragraph text-text transition hover:opacity-75"> Games </Link>
+                    <Link to="/games" className="font-paragraph text-text transition hover:opacity-75"> Games </Link>
                   </li>
       
                 </ul>
@@ -120,16 +120,10 @@ const Footer = () => {
       
                 <ul className="mt-6 space-y-4 text-sm">
                   <li>
-                    <Link to="#" className="font-paragraph text-text transition hover:opacity-75"> How to become a helper?</Link>
+                    <Link to="/#section1" className="font-paragraph text-text transition hover:opacity-75"> How to become a helper?</Link>
                   </li>
       
-                  <li>
-                    <Link to="#" className="font-paragraph text-text transition hover:opacity-75"> How to obtain Disclosure Scotland?</Link>
-                  </li>
-      
-                  <li>
-                    <Link to="#" className="font-paragraph text-text transition hover:opacity-75"> How to register for a training? </Link>
-                  </li>
+                  
                 </ul>
               </div>
       

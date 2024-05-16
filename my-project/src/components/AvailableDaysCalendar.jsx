@@ -47,8 +47,8 @@ const AllUsersCalendar = () => {
 
   return (
     <div className="max-w-screen-xl mx-2 my-10 ">
-      <h3 className="text-primary font-heading text-xl sm:text-2xl font-medium max-w-screen-xl mx-auto pb-3"> Helpers Availability </h3>
-      <p className="text-text font-paragraph pb-5">please rotate for mobile view</p> 
+      <h3 className="text-primary font-heading text-xl sm:text-2xl font-medium max-w-screen-xl mx-auto pb-5"> Helpers Availability </h3>
+      {/* <p className="text-text font-paragraph pb-5">please rotate for mobile view</p>  */}
 
       {events.length > 0 ? (
         <Calendar

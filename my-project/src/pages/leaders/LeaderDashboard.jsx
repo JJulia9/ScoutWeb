@@ -7,6 +7,7 @@ import HelperTable from '../../components/HelperTable';
 import UploadForm from '../../components/UploadForm';
 import AvailableDaysCalendar from '../../components/AvailableDaysCalendar';
 import CubsTable from '../../components/CubsTable'; 
+import Events from '../../components/Events';
 
 
 const LeaderDashboard = () => {
@@ -42,7 +43,7 @@ const LeaderDashboard = () => {
       {activeSection === 'section1' && <div><CubsTable /></div> }
       {activeSection === 'section2' && <div><HelperTable/></div>}
       {activeSection === 'section3' && <div><AvailableDaysCalendar/></div>}
-      {activeSection === 'section4' && <div></div>}
+      {activeSection === 'section4' && <div><Events /></div>}
 
     </div>
       

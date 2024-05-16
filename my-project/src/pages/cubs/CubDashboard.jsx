@@ -3,6 +3,7 @@ import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import UploadForm from '../../components/UploadForm';   
 import ProfileCard from '../../components/ProfileCard';
+import Events from '../../components/Events';
 
 
 
@@ -24,9 +25,11 @@ const CubDashboard = () => {
     
 
          <ProfileCard />
+         <Events />
 
 
          <UploadForm />
+        
         </div>
         <Footer />
         </>

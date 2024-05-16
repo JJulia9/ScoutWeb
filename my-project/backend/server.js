@@ -7,6 +7,7 @@ require('dotenv').config();
 const multer = require('multer');
 const User = require('./model/User');
 const Post = require('./model/Posts');
+const Event = require('./model/Events');
 
 
 
@@ -333,5 +334,18 @@ app.get('/api/avaibility/all', async (req, res) => {
   } catch (error) {
     console.error('Error fetching availability:', error);
     res.status(500).json({ error: 'Server error' });
+  }
+});
+
+
+
+//fetch all events
+app.get('/api/events', async (req, res) => {
+  try {
+    const events = await Event.find();
+    res.json(events);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
   }
 });
