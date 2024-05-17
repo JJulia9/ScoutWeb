@@ -79,7 +79,7 @@ const Login = () => {
       
       <div className="w-full mt-20 mr-0 mb-0 ml-0 relative z-10 max-w-2xl lg:mt-0 lg:w-5/12">
 
-      <form onClick={handleLogin}>
+      <form onSubmit={handleLogin}>
         <div className="flex flex-col items-start justify-start pt-10 pr-10 pb-10 pl-10 bg-white shadow-2xl rounded-xl
             relative z-10">
           <p className="text-secondary w-full text-3xl font-medium text-center leading-snug font-heading pb-2">Welcome back! </p>
@@ -119,7 +119,7 @@ const Login = () => {
 
 
             <div className="relative">
-              <button type='submit'  className="font-paragraph  w-full inline-block pt-4 pr-5 pb-4 pl-5 text-xl font-medium text-center text-white bg-accent
+              <button type='submit' className="font-paragraph  w-full inline-block pt-4 pr-5 pb-4 pl-5 text-xl font-medium text-center text-white bg-accent
                   rounded-xl transition duration-200 hover:bg-red-400 ease">Login</button>
             </div>
             

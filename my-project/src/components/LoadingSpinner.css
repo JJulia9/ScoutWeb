@@ -1,0 +1,51 @@
+/* LoadingSpinner.css */
+
+/* Overlay to cover the entire screen */
+.loading-spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFAF5;
+    z-index: 9999; /* Ensure the spinner appears above other content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Spinner container */
+  .loading-spinner {
+    width: 100px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    position: relative;
+  }
+  
+  /* Spinner animation */
+  .spinner {
+    width: 100%;
+    height: 100%;
+    animation: spin 1s linear infinite; /* Rotate animation */
+  }
+  
+
+/* Loading spinner animation */
+@keyframes spin {
+    0% {
+      transform: rotate(-35deg);
+    }
+    50% {
+      transform: rotate(35deg);
+    }
+    100% {
+      transform: rotate(-35deg);
+    }
+  }
+  
+  
+  /* Style for the loading image */
+  .spinner img {
+    width: 100%;
+    height: 100%;
+  }
+  
