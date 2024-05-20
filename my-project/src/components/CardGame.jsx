@@ -17,7 +17,7 @@ const CardGame = ({image, url, name, description}) => {
 
       <Link to={url} target="_blank">
                     <div className="flex justify-center items-center m-5">
-                  <button className="font-paragraph hidden lg:inline-block py-2 px-6 bg-secondary hover:bg-shade text-l text-white font-bold rounded-xl transition duration-200">PLAY</button>
+                  <button className="font-paragraph  lg:inline-block py-2 px-6 bg-secondary hover:bg-shade text-l text-white font-bold rounded-xl transition duration-200">PLAY</button>
                   </div>
                   </Link>
     </div>

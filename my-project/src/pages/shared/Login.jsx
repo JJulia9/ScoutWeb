@@ -120,7 +120,7 @@ const Login = () => {
 
             <div className="relative">
               <button type='submit' className="font-paragraph  w-full inline-block pt-4 pr-5 pb-4 pl-5 text-xl font-medium text-center text-white bg-accent
-                  rounded-xl transition duration-200 hover:bg-red-400 ease">Login</button>
+                  rounded-xl transition duration-200 hover:bg-red-400 ease">Sign in</button>
             </div>
             
             {errorMessage && (

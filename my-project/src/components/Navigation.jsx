@@ -129,7 +129,7 @@ import { useNavigate } from 'react-router-dom'; // If using React Router
                         <button  onClick={() => { 
                             handleLogout(); 
                             toggleNav(); 
-                        }} className="font-paragraph block px-10 py-3 mb-2 leading-loose text-s text-center text-white font-semibold bg-accent hover:bg-red-400  rounded-xl">Sign out</button>
+                        }} className="font-paragraph block px-10 py-3 mb-2 mx-2 leading-loose text-s text-center text-white font-semibold bg-accent hover:bg-red-400  rounded-xl">Sign out</button>
                         
                     </>
 
