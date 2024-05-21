@@ -53,6 +53,7 @@ const Badges = () => {
                   id={badge.id}
                   name={badge.name}
                   picture={badge.picture}
+                  description={badge.description}
                 />
               ))}
             </div>

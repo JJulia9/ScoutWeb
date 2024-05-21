@@ -3,98 +3,114 @@
     {
         "id": "1",
         "name": "Activity",
-        "picture": "/badges/Activity.png" 
+        "picture": "/badges/Activity.png" ,
+        "description": "Awarded for participating in a variety of physical activities and maintaining an active lifestyle"
     },
 
 
     {
         "id": "2",
         "name": "Athletics",
-        "picture" : "/badges/Athletics.png"
+        "picture" : "/badges/Athletics.png",
+        "description": "Recognizes achievements in sports and athletic endeavors, demonstrating physical fitness and skill"
     },
 
     {
         "id": "3",
         "name": "Equestrian",
-        "picture" : "/badges/Equestrian.png"
+        "picture" : "/badges/Equestrian.png",
+        "description": "Granted for proficiency in horse riding and understanding equine care and management"
     },
 
     {
         "id": "4",
         "name": "Fighter",
-        "picture" : "/badges/Fighter.png"
+        "picture" : "/badges/Fighter.png",
+        "description": "Celebrates dedication and skill in martial arts or combat sports, showing discipline and strength"
     },
 
     {
         "id": "5",
         "name": "Forester",
-        "picture" : "/badges/Forester.png"
+        "picture" : "/badges/Forester.png",
+        "description": "Awarded for knowledge and skills in forestry, conservation, and environmental stewardship"
     },
     
     {
         "id": "6",
         "name": "Hill Walker",
-        "picture" : "/badges/HillWalker.png"
+        "picture" : "/badges/HillWalker.png",
+        "description": "Earned by demonstrating competence in hiking and navigating hilly or mountainous terraing"
     },
 
     {
         "id": "7",
         "name": "Hobbies",
-        "picture" : "/badges/Hobbies.png"
+        "picture" : "/badges/Hobbies.png",
+        "description": "Recognizes dedication and skill in a hobby or craft, showing creativity and passion"
     },
 
     {
         "id": "8",
         "name": "Leader",
-        "picture" : "/badges/Leader.png"
+        "picture" : "/badges/Leader.png",
+        "description": "Awarded for leadership and teamwork, demonstrating the ability to inspire and guide others"
     },
 
     {
         "id": "9",
         "name": "Life Saver",
-        "picture" : "/badges/Lifesaver.png"
+        "picture" : "/badges/Lifesaver.png",
+        "description": "Recognizes knowledge and skills in first aid, emergency response, and water safety"
     },
 
     {
         "id": "10",
         "name": "Local Knowledge",
-        "picture" : "/badges/LocalKnowledge.png"
+        "picture" : "/badges/LocalKnowledge.png",
+        "description": "Awarded for understanding and appreciation of local culture, history, and geography"
     },
 
     {
         "id": "11",
         "name": "Musician",
-        "picture" : "/badges/Musician.png"
+        "picture" : "/badges/Musician.png",
+        "description": "Celebrates talent and skill in music, demonstrating creativity and dedication to the arts"
     },
 
     {
         "id": "12",
         "name": "Orienteer",
-        "picture" : "/badges/Orienteer.png"
+        "picture" : "/badges/Orienteer.png",
+        "description": "Earned by demonstrating competence in map reading, navigation, and outdoor survival"
     },
 
     {
         "id": "13",
         "name": "Scientist",
-        "picture" : "/badges/Scientist.png"
+        "picture" : "/badges/Scientist.png",
+        "description": "Awarded for knowledge and skills in science, technology, engineering, and mathematics"
     },
 
     {
         "id": "14",
         "name": "Swimmer",
-        "picture" : "/badges/Swimmer.png"
+        "picture" : "/badges/Swimmer.png",
+        "description": "Recognizes proficiency in swimming and water safety, demonstrating skill and endurance"
     },
 
     {
         "id": "15",
         "name": "Team worker",
-        "picture" : "/badges/Teamworker.png"
+        "picture" : "/badges/Teamworker.png",
+        "description": "Awarded for collaboration and communication, demonstrating the ability to work effectively with others"
     },
 
     {
         "id": "16",
         "name": "World Faith",
-        "picture" : "/badges/WorldFaith.png"
+        "picture" : "/badges/WorldFaith.png",
+        "description": "Recognizes understanding and respect for different religions and beliefs, promoting peace and unity"
     }
 
 ]
