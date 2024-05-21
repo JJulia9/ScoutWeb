@@ -33,7 +33,8 @@ const Home = () => {
             </div>
 
 
-            <div className="text-center mt-4 pt-3 lg:pb-8 m-2 z-10">
+         <div>
+   <div className="text-center mt-2 pt-3 lg:pb-8 m-2 z-10">
                 <Link to="/about" className="font-paragraph py-4 px-8 bg-secondary hover:bg-shade text-lg sm:text-xl text-white font-bold rounded-xl transition duration-200 z-10">Let's meet</Link>
             </div>
 
@@ -41,8 +42,10 @@ const Home = () => {
                 <img
                 className='w-1/2 sm:w-1/4 z-0' 
                 src='/scouts.svg'
+                alt='scoutsIcon'
                 />
             </div>
+</div>
             
             </section>
 
