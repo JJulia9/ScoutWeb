@@ -57,10 +57,10 @@ const Home = () => {
             <div className="bg-background">
                 <div className="flex items-center justify-center w-1/2 m-auto">
                     <div className="pt-40 pb-10 text-center px-5 sm:px-0">
-                        <h3 className="text-3xl sm:text-4xl text-primary font-heading pb-10">
+                        <h2 className="text-3xl sm:text-4xl text-primary font-heading pb-10">
                             <span className="block"> WELCOME</span>
                             to Obanshire Cub Scouts
-                        </h3>
+                        </h2>
 
                         <p className="text-text font-paragraph text-m sm:text-xl  tracking-wide">
                         Our club has been dedicated to providing enriching experiences for children and youth for over a decade. Through exciting outdoor adventures, skill-building activities, and community service projects, we aim to instill values of leadership, teamwork, and resilience in our Scouts
@@ -146,9 +146,9 @@ const Home = () => {
             <div className="container max-w-7xl px-4">
                 <div className="flex flex-wrap justify-center text-center mb-5">
                     <div className="w-full px-4">
-                        <h4 className="text-2xl sm:text-3xl text-secondary font-heading pb-10">
+                        <h3 className="text-2xl sm:text-3xl text-secondary font-heading pb-10">
                             Our Team
-                        </h4>
+                        </h3>
                         
                     </div>
                 </div>
