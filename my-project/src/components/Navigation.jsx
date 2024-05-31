@@ -1,7 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import { Link } from "react-router-dom";
 import UserInformation from './UserInformation';
-// import * as jwtDecode  from 'jwt-decode';
 import { jwtDecode } from 'jwt-decode';
 //for redirecting user to the correct dashboard
 import { useNavigate } from 'react-router-dom'; // If using React Router

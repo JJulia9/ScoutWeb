@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-
+//one schema for all users
 
 const userSchema = new mongoose.Schema({
   email: String,
@@ -17,26 +17,17 @@ const userSchema = new mongoose.Schema({
   address: String, 
   photo: String,
   allergies: String,
-//   badges:  [{ type: mongoose.Schema.Types.ObjectId, ref: 'Badge' }],
 
 //   helper info
-// firstName: String,
-// lastName: String,
-// dob: Date,
-// photo: String,
     phone: String,
-    // address: String,
     training: Array,
     disclosureScot: Boolean,
-    avaibility: Array, // Ensure correct sub-schema
+    avaibility: Array, 
 
 //   leader info
 // email: String,
 // password: String,
 // photo: String,
-
-//post user id adding
-// posts: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Post' }],
 
 
 });

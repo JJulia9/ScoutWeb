@@ -1,3 +1,4 @@
+//add the required packages
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -5,6 +6,8 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 const multer = require('multer');
+
+//include the models
 const User = require('./model/User');
 const Post = require('./model/Posts');
 const Event = require('./model/Events');
@@ -249,10 +252,6 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage }); // Use the custom storage
-
-
-
-
 
 // const upload = multer({ dest: "uploads/" }); // Specify a directory to store uploaded files
 

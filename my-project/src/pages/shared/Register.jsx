@@ -4,19 +4,7 @@ import { useState } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-// email: String,
-// password: String,
 
-// firstName: String,
-// lastName: String,
-// dob: Date,
-// photo: String,
-// phone: String,
-// address: String,
-// role: String,
-// training: Array,
-// disclosureScot: Boolean,
-// avaibility: Array,
 
 const Register = () => {
     const [firstName, setFirstName] = useState('');

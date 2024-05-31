@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+//shema to store posts
 const postSchema = new mongoose.Schema({
     // user_id: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
     title: String,
